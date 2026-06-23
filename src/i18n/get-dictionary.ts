@@ -10,6 +10,8 @@ const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
     import("./dictionaries/pt-br.json").then((module) => module.default),
   "en-us": () =>
     import("./dictionaries/en-us.json").then((module) => module.default),
+  "es-es": () =>
+    import("./dictionaries/es-es.json").then((module) => module.default),
 };
 
 export async function getDictionary(locale: Locale): Promise<Dictionary> {
