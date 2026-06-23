@@ -110,5 +110,47 @@
         "description": "Lorem Ipsum is simply dummy text of the printing and"
       }
     ]
+  },
+  "structure": {
+    "heading": {
+      "line1": "DISCOVER THE",
+      "line2": "EVENT STRUCTURE"
+    },
+    "description": "A complete space to welcome you, your family and your friends with comfort, safety and great energy.",
+    "viewBlueprint": "VIEW FULL FLOOR PLAN",
+    "closeBlueprint": "Close",
+    "mapAlt": "Isometric map of the Gentlemen Blue event structure",
+    "blueprintAlt": "Full floor plan of Armazém Garage Bar — indoor area",
+    "stats": {
+      "titlePrefix": "NUMBERS THAT",
+      "titleHighlight": "INSPIRE",
+      "items": [
+        {
+          "value": "+ 1000",
+          "label": "PARTICIPANTS",
+          "subtext": "Lorem Ipsum is"
+        },
+        {
+          "value": "+ 20",
+          "label": "EXHIBITORS",
+          "subtext": "Lorem Ipsum is"
+        },
+        {
+          "value": "+ 15",
+          "label": "EVENT HOURS",
+          "subtext": "Lorem Ipsum is"
+        },
+        {
+          "value": "05th",
+          "label": "EDITION",
+          "subtext": "Lorem Ipsum is"
+        },
+        {
+          "value": "01",
+          "label": "CAUSE",
+          "subtext": "Lorem Ipsum is"
+        }
+      ]
+    }
   }
 }
