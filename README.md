@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gentlemen Blue
 
-## Getting Started
+Landing page for **Gentlemen Blue** — the 5th edition of the annual event organized by Gentlemen Moto Club to raise awareness about prostate cancer and support healthcare institutions focused on prevention and treatment.
 
-First, run the development server:
+**Live site:** [gentlemenblue.com.br](https://gentlemenblue.com.br/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech stack
+
+- [Next.js 16](https://nextjs.org/) (App Router)
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [pnpm](https://pnpm.io/) for package management
+
+## Features
+
+- **Internationalization** — Portuguese (`/pt-br`) and English (`/en-us`) with JSON dictionaries
+- **Locale detection** — automatic redirect based on `Accept-Language` and `NEXT_LOCALE` cookie via `src/proxy.ts`
+- **Responsive landing sections**
+  - **Hero** — full-viewport intro with navigation, event details, CTAs, and countdown
+  - **Movement** — “more than an event” section with character illustration and copy
+- **Optimized assets** — WebP images in `public/images/`
+- **Custom favicon** — site logo (`public/images/logo.webp`)
+
+## Typography
+
+| Usage | Font |
+| --- | --- |
+| Hero titles | Empera / Empera Vintage (local) |
+| Hero UI text | Bebas Neue, Montserrat |
+| Movement title | Abril Fatface |
+| Movement body | Inter |
+| Other UI | Poppins (available) |
+
+Google Fonts are loaded via `next/font` in `src/lib/fonts.ts`. For the Hero titles to render correctly, add the local font files:
+
+```
+public/fonts/Empera.woff2
+public/fonts/EmperaVintage.woff2
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 20+
+- pnpm
 
-## Learn More
+### Install and run
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm install
+pnpm dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000). The app redirects to `/pt-br` or `/en-us` based on your browser language.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Scripts
 
-## Deploy on Vercel
+| Command | Description |
+| --- | --- |
+| `pnpm dev` | Start development server |
+| `pnpm build` | Production build |
+| `pnpm start` | Serve production build |
+| `pnpm lint` | Run ESLint |
+| `pnpm lint:fix` | Run ESLint with auto-fix |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/
+│   ├── [locale]/          # Locale-scoped routes (pt-br, en-us)
+│   │   ├── layout.tsx     # Layout, metadata, fonts
+│   │   └── page.tsx       # Home page
+│   ├── globals.css        # Global styles and design tokens
+│   └── layout.tsx         # Root layout passthrough
+├── components/
+│   ├── Hero.tsx           # Hero section + header
+│   ├── Header.tsx         # Site navigation
+│   ├── Countdown.tsx      # Event countdown timer
+│   └── Movement.tsx       # Second section
+├── i18n/
+│   ├── config.ts          # Locale configuration
+│   ├── get-dictionary.ts  # Dictionary loader
+│   ├── get-locale.ts      # Accept-Language detection
+│   └── dictionaries/      # pt-br.json, en-us.json
+├── lib/
+│   └── fonts.ts           # Google Font definitions
+└── proxy.ts               # Locale redirect middleware
+
+public/
+├── images/                # WebP assets (logo, hero, movement)
+└── fonts/                 # Local Empera font files (required for Hero)
+```
+
+## Design tokens
+
+Brand colors are defined in `src/app/globals.css`:
+
+- **Blue** — `#0E7AEB`
+- **Gray** — `#CCCCCC`
+
+## License
+
+MIT — see [package.json](package.json).
+
+## Author
+
+João Pacheco
