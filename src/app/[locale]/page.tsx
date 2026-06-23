@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 
+import { SirBlue } from "@/components/SirBlue";
+import { Sponsors } from "@/components/Sponsors";
 import { Attractions } from "@/components/Attractions";
 import { Structure } from "@/components/Structure";
 import { Hero } from "@/components/Hero";
@@ -22,6 +24,8 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       <Movement dict={dict.movement} />
       <Attractions dict={dict.attractions} />
       <Structure dict={dict.structure} />
+      <SirBlue dict={dict.sirBlue} />
+      <Sponsors dict={dict.sponsors} />
     </main>
   );
 }
