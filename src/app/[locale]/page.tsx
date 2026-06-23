@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { Attractions } from "@/components/Attractions";
+import { Structure } from "@/components/Structure";
 import { Hero } from "@/components/Hero";
 import { Movement } from "@/components/Movement";
 import { hasLocale } from "@/i18n/config";
@@ -20,6 +21,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       <Hero dict={dict} />
       <Movement dict={dict.movement} />
       <Attractions dict={dict.attractions} />
+      <Structure dict={dict.structure} />
     </main>
   );
 }
