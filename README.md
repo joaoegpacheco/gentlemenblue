@@ -15,16 +15,20 @@ Landing page for **Gentlemen Blue** — the 5th edition of the annual event orga
 ## Features
 
 - **Internationalization** — Portuguese (`/pt-br`), English (`/en-us`), and Spanish (`/es-es`) with JSON dictionaries
-- **Locale detection** — automatic redirect based on `Accept-Language` and `NEXT_LOCALE` cookie via `src/proxy.ts`
+- **Locale detection** — automatic redirect based on `Accept-Language` and `NEXT_LOCALE` cookie via `src/proxy.ts` (Next.js 16 proxy convention)
 - **Responsive landing sections**
-  1. **Hero** — full-viewport intro with navigation, event details, CTAs, and countdown
+  1. **Hero** — full-viewport intro with background video, navigation, event details, CTAs, and countdown to November 7, 2026
   2. **Movement** — “more than an event” section with character illustration and copy
   3. **Attractions** — event highlights grid with icons
   4. **Structure** — venue map, floor plan modal, and inspiring numbers stats
   5. **Sir Blue** — official mascot feature with background artwork
-  6. **Sponsors** — sponsors, supporters, and official partners logo grid
-- **Optimized assets** — WebP images in `public/images/` and icons in `public/icons/`
-- **Custom favicon** — site logo (`public/images/logo.webp`)
+  6. **Sponsors** — sponsors, supporters, and official partners logo grid (placeholder slots)
+  7. **FAQ** — accordion with expandable questions and answers
+  8. **Contact** — contact form UI (name, email, phone, message)
+  9. **Footer** — save-the-date banner, social links, partner logos, and copyright
+- **Navigation** — sticky header with desktop links and mobile hamburger menu
+- **Optimized assets** — WebP images in `public/images/`, icons in `public/icons/`, and hero video in `public/videos/`
+- **Custom favicon** — site logo (`public/images/logo.webp`), with `/favicon.ico` redirecting to the logo
 
 ## Typography
 
@@ -42,6 +46,11 @@ Landing page for **Gentlemen Blue** — the 5th edition of the annual event orga
 | Sir Blue body | Inter |
 | Sponsors title | Abril Fatface |
 | Sponsors body | Inter |
+| FAQ title | Abril Fatface |
+| FAQ accordion | Inter |
+| Contact title | Bebas Neue |
+| Contact form / note | Montserrat, Inter |
+| Footer save-the-date | Empera, Montserrat |
 | Other UI | Poppins (available) |
 
 Google Fonts are loaded via `next/font` in `src/lib/fonts.ts`. For Hero titles to render correctly, add the local font files:
@@ -50,6 +59,8 @@ Google Fonts are loaded via `next/font` in `src/lib/fonts.ts`. For Hero titles t
 public/fonts/Empera.woff2
 public/fonts/EmperaVintage.woff2
 ```
+
+These files are not committed to the repository; only `public/fonts/.gitkeep` is tracked.
 
 ## Getting started
 
@@ -88,15 +99,19 @@ src/
 │   ├── globals.css            # Global styles and design tokens
 │   └── layout.tsx             # Root layout passthrough
 ├── components/
-│   ├── Hero.tsx               # Hero section
-│   ├── Header.tsx             # Site navigation
+│   ├── Hero.tsx               # Hero section with background video
+│   ├── Header.tsx             # Site navigation (desktop + mobile)
 │   ├── Countdown.tsx          # Event countdown timer
 │   ├── Movement.tsx           # Movement section
 │   ├── Attractions.tsx        # Attractions section
 │   ├── Structure.tsx          # Event structure + stats
 │   ├── StructureBlueprintDialog.tsx  # Floor plan modal
 │   ├── SirBlue.tsx            # Sir Blue mascot section
-│   └── Sponsors.tsx           # Sponsors section
+│   ├── Sponsors.tsx           # Sponsors section
+│   ├── Faq.tsx                # FAQ section
+│   ├── FaqAccordion.tsx       # FAQ accordion (client component)
+│   ├── Contact.tsx            # Contact form section
+│   └── Footer.tsx             # Footer with social links and partners
 ├── i18n/
 │   ├── config.ts              # Locale configuration
 │   ├── get-dictionary.ts      # Dictionary loader
@@ -104,12 +119,13 @@ src/
 │   └── dictionaries/          # pt-br.json, en-us.json, es-es.json
 ├── lib/
 │   └── fonts.ts               # Google Font definitions
-└── proxy.ts                   # Locale redirect middleware
+└── proxy.ts                   # Locale redirect proxy (Next.js 16)
 
 public/
-├── images/                    # WebP images (hero, movement, structure, sir-blue)
-├── icons/                     # WebP icons (attractions, stars)
-└── fonts/                     # Local Empera font files (required for Hero)
+├── images/                    # WebP images (hero logo, movement, structure, footer, partners)
+├── icons/                     # WebP icons (attractions, stars, social) and FAQ SVG icons
+├── videos/                    # Hero background video
+└── fonts/                     # Local Empera font files (required for Hero titles)
 ```
 
 ## Assets
@@ -117,12 +133,17 @@ public/
 | Path | Usage |
 | --- | --- |
 | `public/images/logo.webp` | Logo and favicon |
-| `public/images/hero-bg.webp` | Hero background |
+| `public/videos/hero-video.mp4` | Hero background video |
 | `public/images/movement-character.webp` | Movement section character |
 | `public/images/structure-blueprint.webp` | Structure section background / floor plan |
 | `public/images/structure-map.webp` | Isometric venue map |
 | `public/images/sir-blue-bg.webp` | Sir Blue section background |
-| `public/icons/*.webp` | Attraction card icons and section stars |
+| `public/images/footer-banner.webp` | Footer save-the-date banner |
+| `public/images/weareon.webp` | We Are On partner logo |
+| `public/images/j2p.webp` | J2P partner logo |
+| `public/icons/*.webp` | Attraction card icons, section stars, and social media icons |
+| `public/icons/faq-expand.svg` | FAQ accordion expand icon |
+| `public/icons/faq-collapse.svg` | FAQ accordion collapse icon |
 
 ## Design tokens
 
@@ -130,6 +151,7 @@ Brand colors are defined in `src/app/globals.css`:
 
 - **Blue** — `#0E7AEB`
 - **Gray** — `#CCCCCC`
+- **Dark background** — `#0a1628` (Hero), `#000000` (sections)
 
 ## License
 
