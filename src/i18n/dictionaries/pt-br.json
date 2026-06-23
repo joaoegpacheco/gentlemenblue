@@ -62,5 +62,53 @@
       "Em sua 5ª edição, o evento reforça seu compromisso com a saúde masculina e a solidariedade, reunindo apaixonados por motociclismo, famílias e parceiros engajados em fazer a diferença."
     ],
     "closing": "HOMENS QUE SE CUIDAM, VIVEM MAIS."
+  },
+  "attractions": {
+    "title": "ATRAÇÕES",
+    "subtitle": "UM DIA INESQUECÍVEL PARA VOCÊ E SUA FAMÍLIA",
+    "items": [
+      {
+        "icon": "grill",
+        "iconAlt": "Churrasco beneficente",
+        "titleLine1": "CHURRASCO",
+        "titleLine2": "BENEFICENTE",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      },
+      {
+        "icon": "guitar",
+        "iconAlt": "Bandas ao vivo",
+        "titleLine1": "BANDAS",
+        "titleLine2": "AO VIVO",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      },
+      {
+        "icon": "podcast",
+        "iconAlt": "Podcasts e entrevistas",
+        "titleLine1": "PODCASTS",
+        "titleLine2": "E ENTREVISTAS",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      },
+      {
+        "icon": "speaker",
+        "iconAlt": "Palestras especiais",
+        "titleLine1": "PALESTRAS",
+        "titleLine2": "ESPECIAIS",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      },
+      {
+        "icon": "motor",
+        "iconAlt": "Exposição Harley Davidson",
+        "titleLine1": "EXPOSIÇÃO",
+        "titleLine2": "HARLEY DAVIDSON",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      },
+      {
+        "icon": "exhibitor",
+        "iconAlt": "Expositores e parceiros",
+        "titleLine1": "EXPOSITORES",
+        "titleLine2": "E PARCEIROS",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      }
+    ]
   }
 }
