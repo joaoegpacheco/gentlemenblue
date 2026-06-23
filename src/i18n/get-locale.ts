@@ -26,6 +26,10 @@ function matchLocale(language: string): Locale | null {
     return "en-us";
   }
 
+  if (normalized.startsWith("es")) {
+    return "es-es";
+  }
+
   return null;
 }
 
