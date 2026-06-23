@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 
+import { Attractions } from "@/components/Attractions";
 import { Hero } from "@/components/Hero";
 import { Movement } from "@/components/Movement";
 import { hasLocale } from "@/i18n/config";
@@ -18,6 +19,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
     <main className="bg-[#0a1628]">
       <Hero dict={dict} />
       <Movement dict={dict.movement} />
+      <Attractions dict={dict.attractions} />
     </main>
   );
 }
