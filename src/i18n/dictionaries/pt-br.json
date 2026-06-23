@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "title": "Gentlemen Blue",
+    "description": "Gentlemen Blue 5ª Edição"
+  },
+  "header": {
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "mainNav": "Navegação principal",
+    "mobileNav": "Navegação mobile",
+    "participate": "PARTICIPAR",
+    "wantToParticipate": "QUERO PARTICIPAR",
+    "nav": {
+      "event": "O EVENTO",
+      "attractions": "ATRAÇÕES",
+      "schedule": "PROGRAMAÇÃO",
+      "structure": "ESTRUTURA",
+      "sponsors": "PATROCINADORES",
+      "gallery": "GALERIA",
+      "faq": "FAQ",
+      "store": "LOJA",
+      "contact": "CONTATO"
+    }
+  },
+  "hero": {
+    "logoAlt": "Gentlemen Blue — 5ª Edição",
+    "tagline": "HOMENS QUE SE CUIDAM VIVEM MAIS.",
+    "eventDetails": {
+      "date": {
+        "primary": "07 NOVEMBRO 2026",
+        "secondary": "SÁBADO"
+      },
+      "time": {
+        "primary": "DAS 11H ÀS 00H",
+        "secondary": "EVENTO COMPLETO"
+      },
+      "location": {
+        "primary": "ARMAZÉM GARAGEM",
+        "secondary": "CURITIBA | PR"
+      }
+    },
+    "wantToParticipate": "QUERO PARTICIPAR",
+    "becomeSponsor": "SEJA PATROCINADOR"
+  },
+  "countdown": {
+    "label": "FALTAM PARA O EVENTO:",
+    "days": "dias",
+    "hours": "horas",
+    "minutes": "min",
+    "seconds": "seg"
+  },
+  "movement": {
+    "imageAlt": "Gentlemen Blue — representação do movimento",
+    "heading": {
+      "line1": "O MOVIMENTO",
+      "line2Prefix": "MAIS DO QUE UM",
+      "line2Highlight": "EVENTO."
+    },
+    "subheading": "O ENCONTRO QUE UNE PAIXÃO, ESTILO E IRMANDADE",
+    "paragraphs": [
+      "O Gentlemen Blue é um evento anual promovido pelo Gentlemen Moto Clube com o propósito de conscientizar a população sobre o câncer de próstata e arrecadar recursos para instituições de saúde que atuam diretamente na prevenção e tratamento da doença.",
+      "Em sua 5ª edição, o evento reforça seu compromisso com a saúde masculina e a solidariedade, reunindo apaixonados por motociclismo, famílias e parceiros engajados em fazer a diferença."
+    ],
+    "closing": "HOMENS QUE SE CUIDAM, VIVEM MAIS."
+  }
+}
