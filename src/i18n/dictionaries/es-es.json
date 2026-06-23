@@ -167,5 +167,91 @@
       "white2": "OFICIALES"
     },
     "logoPlaceholder": "LOGOS PATROCINADORES"
+  },
+  "faq": {
+    "heading": {
+      "white": "DUDAS FRECUENTES",
+      "blue": " - F.A.Q"
+    },
+    "items": [
+      {
+        "question": "¿El evento es de pago?",
+        "answer": "No. La entrada es gratuita."
+      },
+      {
+        "question": "¿PUEDO TRAER A MI FAMILIA?",
+        "answer": "Sí. Gentlemen Blue es un evento abierto para toda la familia, con atracciones para diferentes edades."
+      },
+      {
+        "question": "¿CÓMO FUNCIONA EL ESTACIONAMIENTO?",
+        "answer": "Habrá estacionamiento en el lugar del evento, sujeto a disponibilidad. Se informarán más detalles a medida que se acerque la fecha."
+      },
+      {
+        "question": "¿SE PERMITEN MASCOTAS?",
+        "answer": "No se permiten mascotas, excepto perros guía debidamente identificados."
+      },
+      {
+        "question": "¿TODOS LOS INGRESOS SE DESTINAN A LA CAUSA?",
+        "answer": "Sí. Gentlemen Blue es un evento benéfico y la recaudación apoya la concienciación y prevención del cáncer de próstata."
+      },
+      {
+        "question": "¿CÓMO PUEDO SER PATROCINADOR?",
+        "answer": "Contáctanos en la sección Contáctanos o por los canales oficiales para recibir información de patrocinio y colaboración."
+      },
+      {
+        "question": "¿Necesito comprar entrada?",
+        "answer": "No. La entrada es gratuita y no hay venta de entradas. Solo preséntate el día del evento."
+      },
+      {
+        "question": "¿EL EVENTO SE REALIZA CON LLUVIA?",
+        "answer": "Sí, el evento se realiza con lluvia, salvo condiciones climáticas que representen riesgo para la seguridad."
+      }
+    ]
+  },
+  "contact": {
+    "title": "CONTÁCTANOS",
+    "noteLines": [
+      "QUIZÁ INCLUIR UN CAMPO AQUÍ",
+      "PARA PATROCINADORES.",
+      "UN WHATSAPP QUE VAYA DIRECTO A",
+      "FERNANDINHO/CAMARGO/MADALOSSO...ETC ..."
+    ],
+    "fields": {
+      "name": "nombre",
+      "email": "e-mail",
+      "phone": "teléfono",
+      "message": "mensaje"
+    },
+    "submit": "ENVIAR"
+  },
+  "footer": {
+    "saveTheDate": {
+      "label": "SAVE THE DATE",
+      "date": "07 NOVIEMBRE 2026",
+      "location": "ARMAZÉM GARAGEM | CURITIBA | PR",
+      "taglineLine1": "LA PASIÓN POR LAS MOTOS NOS UNE.",
+      "taglineLine2": "LA SALUD NOS MANTIENE EN EL CAMINO."
+    },
+    "logoAlt": "Gentlemen Blue — 5ª Edición",
+    "followUs": "Sigue nuestras redes",
+    "copyright": "Gentlemen Blue 2026 - Todos los derechos reservados",
+    "weareonAlt": "Agencia WeAreOn",
+    "j2pAlt": "J2P",
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "spotify": "Spotify",
+      "whatsapp": "WhatsApp"
+    },
+    "socialLinks": {
+      "instagram": "#",
+      "facebook": "#",
+      "spotify": "#",
+      "whatsapp": "#"
+    },
+    "partnerLinks": {
+      "weareon": "#",
+      "j2p": "#"
+    }
   }
 }
