@@ -25,6 +25,11 @@ export async function generateMetadata({
   return {
     title: dict.metadata.title,
     description: dict.metadata.description,
+    icons: {
+      icon: "/images/logo.webp",
+      shortcut: "/images/logo.webp",
+      apple: "/images/logo.webp",
+    },
   };
 }
 
