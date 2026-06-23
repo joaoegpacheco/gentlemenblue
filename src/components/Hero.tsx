@@ -23,14 +23,17 @@ export function Hero({ dict }: HeroProps) {
       className="relative min-h-[100vw] bg-[#0a1628] lg:h-screen lg:max-h-screen lg:min-h-0 lg:overflow-hidden"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <Image
-          src="/images/hero-bg.webp"
-          alt=""
-          fill
-          priority
-          className="object-cover object-[72%_center] lg:object-[right_center]"
-          sizes="100vw"
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover object-[72%_center] lg:object-[right_center]"
+          aria-hidden
+        >
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
+        </video>
 
         <div
           className="absolute inset-0 bg-linear-to-r from-[#0a1628]/92 via-[#0a1628]/45 to-transparent"
