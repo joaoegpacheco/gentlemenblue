@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "title": "Gentlemen Blue",
+    "description": "Gentlemen Blue 5th Edition"
+  },
+  "header": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "participate": "JOIN",
+    "wantToParticipate": "I WANT TO JOIN",
+    "nav": {
+      "event": "THE EVENT",
+      "attractions": "ATTRACTIONS",
+      "schedule": "SCHEDULE",
+      "structure": "VENUE",
+      "sponsors": "SPONSORS",
+      "gallery": "GALLERY",
+      "faq": "FAQ",
+      "store": "STORE",
+      "contact": "CONTACT"
+    }
+  },
+  "hero": {
+    "logoAlt": "Gentlemen Blue — 5th Edition",
+    "tagline": "MEN WHO TAKE CARE OF THEMSELVES LIVE MORE.",
+    "eventDetails": {
+      "date": {
+        "primary": "NOVEMBER 07, 2026",
+        "secondary": "SATURDAY"
+      },
+      "time": {
+        "primary": "11 AM to 12 AM",
+        "secondary": "FULL EVENT"
+      },
+      "location": {
+        "primary": "ARMAZÉM GARAGEM",
+        "secondary": "CURITIBA | PR"
+      }
+    },
+    "wantToParticipate": "I WANT TO JOIN",
+    "becomeSponsor": "BECOME A SPONSOR"
+  },
+  "countdown": {
+    "label": "TIME LEFT UNTIL THE EVENT:",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "min",
+    "seconds": "sec"
+  },
+  "movement": {
+    "imageAlt": "Gentlemen Blue — movement representation",
+    "heading": {
+      "line1": "THE MOVEMENT",
+      "line2Prefix": "MORE THAN AN",
+      "line2Highlight": "EVENT."
+    },
+    "subheading": "THE GATHERING THAT UNITES PASSION, STYLE AND BROTHERHOOD",
+    "paragraphs": [
+      "Gentlemen Blue is an annual event organized by Gentlemen Moto Club to raise awareness about prostate cancer and raise funds for healthcare institutions that work directly on prevention and treatment of the disease.",
+      "In its 5th edition, the event reinforces its commitment to men's health and solidarity, bringing together motorcycle enthusiasts, families and partners committed to making a difference."
+    ],
+    "closing": "MEN WHO TAKE CARE OF THEMSELVES LIVE MORE."
+  }
+}
