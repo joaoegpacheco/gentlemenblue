@@ -10,7 +10,7 @@ type MovementProps = {
 export function Movement({ dict }: MovementProps) {
   return (
     <section id="movimento" className="bg-black">
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-8 px-6 py-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-12 lg:px-10 lg:py-12">
+      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-8 px-3 py-5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-12 lg:px-5 lg:py-3">
         <div className="mx-auto w-full max-w-[280px] sm:max-w-xs lg:mx-0 lg:max-w-[min(100%,22rem)] xl:max-w-[min(100%,26rem)]">
           <Image
             src="/images/movement-character.webp"
