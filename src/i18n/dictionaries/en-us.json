@@ -152,5 +152,20 @@
         }
       ]
     }
+  },
+  "sirBlue": {
+    "title": "SIR BLUE",
+    "subtitle": "OFFICIAL MASCOT",
+    "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "tagline": "MEN WHO TAKE CARE OF THEMSELVES LIVE MORE."
+  },
+  "sponsors": {
+    "heading": {
+      "blue1": "SPONSORS, ",
+      "white1": "SUPPORTERS",
+      "blue2": "AND PARTNERS ",
+      "white2": "OFFICIAL"
+    },
+    "logoPlaceholder": "SPONSOR LOGOS"
   }
 }
