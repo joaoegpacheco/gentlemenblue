@@ -62,5 +62,53 @@
       "In its 5th edition, the event reinforces its commitment to men's health and solidarity, bringing together motorcycle enthusiasts, families and partners committed to making a difference."
     ],
     "closing": "MEN WHO TAKE CARE OF THEMSELVES LIVE MORE."
+  },
+  "attractions": {
+    "title": "ATTRACTIONS",
+    "subtitle": "AN UNFORGETTABLE DAY FOR YOU AND YOUR FAMILY",
+    "items": [
+      {
+        "icon": "grill",
+        "iconAlt": "Charity barbecue",
+        "titleLine1": "CHARITY",
+        "titleLine2": "BARBECUE",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      },
+      {
+        "icon": "guitar",
+        "iconAlt": "Live bands",
+        "titleLine1": "LIVE",
+        "titleLine2": "BANDS",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      },
+      {
+        "icon": "podcast",
+        "iconAlt": "Podcasts and interviews",
+        "titleLine1": "PODCASTS",
+        "titleLine2": "AND INTERVIEWS",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      },
+      {
+        "icon": "speaker",
+        "iconAlt": "Special talks",
+        "titleLine1": "SPECIAL",
+        "titleLine2": "TALKS",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      },
+      {
+        "icon": "motor",
+        "iconAlt": "Harley Davidson exhibition",
+        "titleLine1": "HARLEY DAVIDSON",
+        "titleLine2": "EXHIBITION",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      },
+      {
+        "icon": "exhibitor",
+        "iconAlt": "Exhibitors and partners",
+        "titleLine1": "EXHIBITORS",
+        "titleLine2": "AND PARTNERS",
+        "description": "Lorem Ipsum is simply dummy text of the printing and"
+      }
+    ]
   }
 }
