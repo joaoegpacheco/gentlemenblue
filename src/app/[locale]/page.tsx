@@ -7,8 +7,8 @@ import { Gallery } from "@/components/Gallery";
 import { Store } from "@/components/Store";
 import { SirBlue } from "@/components/SirBlue";
 import { Sponsors } from "@/components/Sponsors";
-import { Attractions } from "@/components/Attractions";
-import { Structure } from "@/components/Structure";
+import { AttractionsStructureScroll } from "@/components/AttractionsStructureScroll";
+import { BackToTop } from "@/components/BackToTop";
 import { Hero } from "@/components/Hero";
 import { Movement } from "@/components/Movement";
 import { hasLocale } from "@/i18n/config";
@@ -24,11 +24,13 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
   const dict = await getDictionary(locale);
 
   return (
-    <main className="bg-[#0a1628]">
+    <main className="bg-[#000000]">
       <Hero dict={dict} />
       <Movement dict={dict.movement} />
-      <Attractions dict={dict.attractions} />
-      <Structure dict={dict.structure} />
+      <AttractionsStructureScroll
+        attractionsDict={dict.attractions}
+        structureDict={dict.structure}
+      />
       <SirBlue dict={dict.sirBlue} />
       <Sponsors dict={dict.sponsors} />
       <Gallery dict={dict.gallery} />
@@ -36,6 +38,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       <Faq dict={dict.faq} />
       <Contact dict={dict.contact} />
       <Footer dict={dict.footer} />
+      <BackToTop label={dict.backToTop} />
     </main>
   );
 }
