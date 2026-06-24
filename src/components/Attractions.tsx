@@ -1,15 +1,16 @@
 import Image from "next/image";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
+import { assets } from "@/lib/assets";
 import { abrilFatface, inter } from "@/lib/fonts";
 
 const ICONS = {
-  grill: "/icons/grill.webp",
-  guitar: "/icons/guitar.webp",
-  podcast: "/icons/podcast.webp",
-  speaker: "/icons/speaker.webp",
-  motor: "/icons/motor.webp",
-  exhibitor: "/icons/exhibitor.webp",
+  grill: assets.icons.grill,
+  guitar: assets.icons.guitar,
+  podcast: assets.icons.podcast,
+  speaker: assets.icons.speaker,
+  motor: assets.icons.motor,
+  exhibitor: assets.icons.exhibitor,
 } as const;
 
 type AttractionIcon = keyof typeof ICONS;
@@ -25,7 +26,7 @@ export function Attractions({ dict }: AttractionsProps) {
         <header className="text-center">
           <div className="flex items-center justify-center gap-4 sm:gap-6">
             <Image
-              src="/icons/star.webp"
+              src={assets.icons.star}
               alt=""
               width={126}
               height={126}
@@ -38,7 +39,7 @@ export function Attractions({ dict }: AttractionsProps) {
               {dict.title}
             </h2>
             <Image
-              src="/icons/star.webp"
+              src={assets.icons.star}
               alt=""
               width={126}
               height={126}
