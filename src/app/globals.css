@@ -96,3 +96,71 @@ p {
 [data-body-font="poppins"] {
   --font-body-active: var(--font-poppins);
 }
+
+@keyframes logo-jump {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  12% {
+    transform: translateY(0) scale(1.04, 0.96);
+  }
+
+  28% {
+    transform: translateY(-28px) scale(0.98, 1.04);
+  }
+
+  38% {
+    transform: translateY(0) scale(1.06, 0.94);
+  }
+
+  48% {
+    transform: translateY(-14px) scale(0.99, 1.02);
+  }
+
+  56% {
+    transform: translateY(0) scale(1.03, 0.97);
+  }
+
+  64% {
+    transform: translateY(-6px) scale(1);
+  }
+
+  72% {
+    transform: translateY(0) scale(1.01, 0.99);
+  }
+}
+
+.logo-flame-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sponsors-marquee-scroller {
+  cursor: grab;
+  touch-action: pan-x;
+}
+
+.sponsors-marquee-scroller:active {
+  cursor: grabbing;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sponsors-marquee-scroller {
+    cursor: auto;
+  }
+}
+
+.logo-animate-bounce {
+  animation: logo-jump 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  transform-origin: center bottom;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-animate-bounce {
+    animation: none;
+  }
+}
