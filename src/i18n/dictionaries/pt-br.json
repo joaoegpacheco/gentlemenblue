@@ -168,6 +168,27 @@
     },
     "logoPlaceholder": "LOGOS PATROCINADORES"
   },
+  "gallery": {
+    "heading": {
+      "white": "GALERIA DE ",
+      "blue": "MOMENTOS"
+    },
+    "subtitle": "CONFIRA AS FOTOS DAS EDIÇÕES ANTERIORES",
+    "imageAlt": "Momento do Gentlemen Blue",
+    "viewFullGallery": "VER GALERIA COMPLETA",
+    "viewFullGalleryHref": "#galeria"
+  },
+  "store": {
+    "heading": {
+      "white": "LOJA ",
+      "blue": "GENTLEMEN BLUE"
+    },
+    "hashtag": "#usegentlemenblue",
+    "productsGridAlt": "Produtos Gentlemen Blue — camisetas, bonés e meias",
+    "shirtDetailsAlt": "Camiseta preta Gentlemen Blue — detalhes de estampa e medidas",
+    "buyNow": "COMPRAR AGORA",
+    "buyNowHref": "#"
+  },
   "faq": {
     "heading": {
       "white": "DÚVIDA FREQUENTES",
@@ -243,15 +264,9 @@
       "spotify": "Spotify",
       "whatsapp": "WhatsApp"
     },
-    "socialLinks": {
-      "instagram": "#",
-      "facebook": "#",
-      "spotify": "#",
-      "whatsapp": "#"
-    },
     "partnerLinks": {
-      "weareon": "#",
-      "j2p": "#"
+      "weareon": "https://www.weareon.com.br/",
+      "j2p": "https://www.linkedin.com/company/j2p-solu%C3%A7%C3%B5es-tecnol%C3%B3gicas"
     }
   }
 }
