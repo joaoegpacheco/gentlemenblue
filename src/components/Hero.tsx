@@ -1,10 +1,12 @@
 import Link from "next/link";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
+import { getCountdownSnapshot } from "@/lib/countdown";
 
 import { AnimatedLogo } from "./AnimatedLogo";
 import { Countdown } from "./Countdown";
 import { Header } from "./Header";
+import { HeroBackground } from "./HeroBackground";
 
 type HeroProps = {
   dict: Dictionary;
@@ -23,17 +25,7 @@ export function Hero({ dict }: HeroProps) {
       className="relative min-h-[100vw] bg-[#0a1628] lg:h-screen lg:max-h-screen lg:min-h-0 lg:overflow-hidden"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="absolute inset-0 h-full w-full object-cover object-[72%_center] lg:object-[right_center]"
-          aria-hidden
-        >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-        </video>
+        <HeroBackground />
 
         <div
           className="absolute inset-0 bg-linear-to-r from-[#0a1628]/92 via-[#0a1628]/45 to-transparent"
@@ -111,7 +103,10 @@ export function Hero({ dict }: HeroProps) {
             </div>
 
             <div className="mt-5 flex flex-1 flex-col justify-end min-h-0 sm:mt-6 lg:mt-4">
-              <Countdown dict={dict.countdown} />
+              <Countdown
+                dict={dict.countdown}
+                initialTimeLeft={getCountdownSnapshot()}
+              />
             </div>
           </div>
         </div>
