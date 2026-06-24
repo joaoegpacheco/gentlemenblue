@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { Contact } from "@/components/Contact";
 import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
+import { Gallery } from "@/components/Gallery";
+import { Store } from "@/components/Store";
 import { SirBlue } from "@/components/SirBlue";
 import { Sponsors } from "@/components/Sponsors";
 import { Attractions } from "@/components/Attractions";
@@ -29,6 +31,8 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
       <Structure dict={dict.structure} />
       <SirBlue dict={dict.sirBlue} />
       <Sponsors dict={dict.sponsors} />
+      <Gallery dict={dict.gallery} />
+      <Store dict={dict.store} />
       <Faq dict={dict.faq} />
       <Contact dict={dict.contact} />
       <Footer dict={dict.footer} />
