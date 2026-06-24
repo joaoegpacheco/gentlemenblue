@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { fontVariables } from "@/lib/fonts";
+import { assets } from "@/lib/assets";
 import { getHtmlLang, hasLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 
@@ -26,9 +27,9 @@ export async function generateMetadata({
     title: dict.metadata.title,
     description: dict.metadata.description,
     icons: {
-      icon: "/images/logo.webp",
-      shortcut: "/images/logo.webp",
-      apple: "/images/logo.webp",
+      icon: assets.images.logo,
+      shortcut: assets.images.logo,
+      apple: assets.images.logo,
     },
   };
 }
