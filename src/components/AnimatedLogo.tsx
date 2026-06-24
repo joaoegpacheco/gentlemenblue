@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 import { createLogoFlameCanvas } from "@/lib/logoFlameCanvas";
+import { assets } from "@/lib/assets";
 
 type AnimatedLogoProps = {
   alt: string;
@@ -24,12 +25,12 @@ const FLAME_LAYOUT = {
   hero: {
     canvasWidthScale: 1.5,
     canvasHeightScale: 1.05,
-    offsetTopScale: 0.2,
+    offsetTopScale: 0.26,
   },
   footer: {
-    canvasWidthScale: 1.5,
-    canvasHeightScale: 1.2,
-    offsetTopScale: 0.38,
+    canvasWidthScale: 1.55,
+    canvasHeightScale: 1.12,
+    offsetTopScale: 0.34,
   },
 } as const;
 
@@ -49,8 +50,9 @@ function LogoFlameCanvas({ logoWidth, logoHeight, variant }: LogoFlameCanvasProp
     return createLogoFlameCanvas(container, {
       width: canvasW,
       height: canvasH,
+      intensity: variant,
     });
-  }, [canvasH, canvasW]);
+  }, [canvasH, canvasW, variant]);
 
   return (
     <div
@@ -110,7 +112,7 @@ export function AnimatedLogo({
         ) : null}
 
         <Image
-          src="/images/logo.webp"
+          src={assets.images.logo}
           alt={alt}
           width={width}
           height={height}
