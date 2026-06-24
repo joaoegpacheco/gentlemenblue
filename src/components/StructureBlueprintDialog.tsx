@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
+import { assets } from "@/lib/assets";
+
 type StructureBlueprintDialogProps = {
   label: string;
   imageAlt: string;
@@ -69,7 +71,7 @@ export function StructureBlueprintDialog({
               {closeLabel}
             </button>
             <Image
-              src="/images/structure-blueprint.webp"
+              src={assets.images.structureBlueprint}
               alt={imageAlt}
               width={1024}
               height={339}
