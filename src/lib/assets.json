@@ -1,0 +1,38 @@
+{
+  "images": {
+    "heroBg": "images/hero-bg.webp",
+    "logo": "images/logo.webp",
+    "footerBanner": "images/footer-banner.webp",
+    "weareon": "images/weareon.webp",
+    "j2p": "images/j2p.webp",
+    "movementCharacter": "images/movement-character.webp",
+    "sirBlueBg": "images/sir-blue-bg.webp",
+    "structureBlueprint": "images/structure-blueprint.webp",
+    "structureMap": "images/structure-map.webp",
+    "galleryPlaceholder": "images/gallery-placeholder.webp",
+    "storeProductsGrid": "images/store-products-grid.webp",
+    "storeShirtDetails": "images/store-shirt-details.webp"
+  },
+  "icons": {
+    "star": "icons/star.webp",
+    "instagram": "icons/instagram.webp",
+    "facebook": "icons/facebook.webp",
+    "spotify": "icons/spotify.webp",
+    "whatsapp": "icons/whatsapp.webp",
+    "faqExpand": "icons/faq-expand.svg",
+    "faqCollapse": "icons/faq-collapse.svg",
+    "grill": "icons/grill.webp",
+    "guitar": "icons/guitar.webp",
+    "podcast": "icons/podcast.webp",
+    "speaker": "icons/speaker.webp",
+    "motor": "icons/motor.webp",
+    "exhibitor": "icons/exhibitor.webp"
+  },
+  "videos": {
+    "hero": "videos/hero-video.mp4"
+  },
+  "fonts": {
+    "emperaRegular": "src/assets/fonts/Empera-Regular.otf",
+    "emperaVintage": "src/assets/fonts/Empera-Vintage.otf"
+  }
+}
