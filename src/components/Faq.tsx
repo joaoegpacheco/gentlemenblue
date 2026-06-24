@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
+import { assets } from "@/lib/assets";
 import { abrilFatface } from "@/lib/fonts";
 
 import { FaqAccordion } from "./FaqAccordion";
@@ -16,7 +17,7 @@ export function Faq({ dict }: FaqProps) {
         <header className="text-center">
           <div className="flex items-center justify-center gap-3 sm:gap-5">
             <Image
-              src="/icons/star.webp"
+              src={assets.icons.star}
               alt=""
               width={126}
               height={126}
@@ -30,7 +31,7 @@ export function Faq({ dict }: FaqProps) {
               <span className="text-brand-blue">{dict.heading.blue}</span>
             </h2>
             <Image
-              src="/icons/star.webp"
+              src={assets.icons.star}
               alt=""
               width={126}
               height={126}
