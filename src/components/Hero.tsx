@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
 
+import { AnimatedLogo } from "./AnimatedLogo";
 import { Countdown } from "./Countdown";
 import { Header } from "./Header";
 
@@ -48,13 +48,12 @@ export function Hero({ dict }: HeroProps) {
 
         <div className="mx-auto flex w-full max-w-[1440px] flex-1 flex-col px-6 pb-6 pt-0 min-h-0 lg:px-10 lg:pb-8">
           <div className="flex min-h-0 flex-1 flex-col max-w-3xl">
-            <Image
-              src="/images/logo.webp"
+            <AnimatedLogo
               alt={dict.hero.logoAlt}
               width={204}
               height={294}
               priority
-              className="mb-3 h-auto w-[4.5rem] sm:mb-4 sm:w-20 lg:mb-5 lg:w-[5.5rem]"
+              className="mb-3 w-[4.5rem] sm:mb-4 sm:w-20 lg:mb-5 lg:w-[5.5rem]"
             />
 
             <h1 className="leading-[0.85] tracking-wide">
