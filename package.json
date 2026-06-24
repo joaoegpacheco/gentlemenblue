@@ -14,10 +14,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint": "eslint --cache --cache-location .eslintcache src next.config.ts",
+    "lint:fix": "eslint --cache --cache-location .eslintcache --fix src next.config.ts",
+    "typecheck": "tsc --noEmit",
+    "assets:check": "node scripts/check-assets.mjs"
   },
   "dependencies": {
+    "framer-motion": "^12.41.0",
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4"
