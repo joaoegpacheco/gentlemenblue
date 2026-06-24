@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useState } from "react";
 
+import { assets } from "@/lib/assets";
+
 type FaqItem = {
   question: string;
   answer: string;
@@ -35,7 +37,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
                 {item.question}
               </span>
               <Image
-                src={isOpen ? "/icons/faq-collapse.svg" : "/icons/faq-expand.svg"}
+                src={isOpen ? assets.icons.faqCollapse : assets.icons.faqExpand}
                 alt=""
                 width={24}
                 height={24}
