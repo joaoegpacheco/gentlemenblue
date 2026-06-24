@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
+import { assets } from "@/lib/assets";
 import { abrilFatface, inter } from "@/lib/fonts";
 
 type StoreProps = {
@@ -58,7 +59,7 @@ export function Store({ dict }: StoreProps) {
 
         <div className="mt-10 space-y-3 sm:mt-12 sm:space-y-4 lg:mt-14">
           <Image
-            src="/images/store-products-grid.webp"
+            src={assets.images.storeProductsGrid}
             alt={dict.productsGridAlt}
             width={1024}
             height={289}
@@ -66,7 +67,7 @@ export function Store({ dict }: StoreProps) {
             sizes="(max-width: 1440px) 100vw, 1440px"
           />
           <Image
-            src="/images/store-shirt-details.webp"
+            src={assets.images.storeShirtDetails}
             alt={dict.shirtDetailsAlt}
             width={1024}
             height={828}
