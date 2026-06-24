@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
+import { assets } from "@/lib/assets";
 import { inter } from "@/lib/fonts";
 
 type SirBlueProps = {
@@ -12,7 +13,7 @@ export function SirBlue({ dict }: SirBlueProps) {
     <section className="bg-black">
       <div className="relative w-full lg:aspect-1024/265">
         <Image
-          src="/images/sir-blue-bg.webp"
+          src={assets.images.sirBlueBg}
           alt=""
           width={1024}
           height={265}
