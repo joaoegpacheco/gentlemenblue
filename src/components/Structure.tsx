@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
+import { assets } from "@/lib/assets";
 import { abrilFatface, inter } from "@/lib/fonts";
 
 import { StructureBlueprintDialog } from "./StructureBlueprintDialog";
@@ -15,10 +16,9 @@ export function Structure({ dict }: StructureProps) {
       <div className="relative w-full">
         <div className="pointer-events-none absolute inset-0 w-full overflow-hidden">
           <Image
-            src="/images/structure-blueprint.webp"
+            src={assets.images.structureBlueprint}
             alt=""
             fill
-            priority
             sizes="100vw"
             className="object-cover object-[left_center]"
             aria-hidden
@@ -49,7 +49,7 @@ export function Structure({ dict }: StructureProps) {
 
           <div className="w-full">
             <Image
-              src="/images/structure-map.webp"
+              src={assets.images.structureMap}
               alt={dict.mapAlt}
               width={1024}
               height={682}
@@ -64,7 +64,7 @@ export function Structure({ dict }: StructureProps) {
         <header className="text-center">
           <div className="flex items-center justify-center gap-3 sm:gap-5">
             <Image
-              src="/icons/star.webp"
+              src={assets.icons.star}
               alt=""
               width={126}
               height={126}
@@ -78,7 +78,7 @@ export function Structure({ dict }: StructureProps) {
               <span className="text-brand-blue">{dict.stats.titleHighlight}</span>
             </h3>
             <Image
-              src="/icons/star.webp"
+              src={assets.icons.star}
               alt=""
               width={126}
               height={126}
