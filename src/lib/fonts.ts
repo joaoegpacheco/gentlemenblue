@@ -1,4 +1,19 @@
-import { Abril_Fatface, Bebas_Neue, Inter, Montserrat, Poppins } from "next/font/google";
+import { Abril_Fatface, Bebas_Neue, Inter, Montserrat } from "next/font/google";
+import localFont from "next/font/local";
+
+export const empera = localFont({
+  src: "../assets/fonts/Empera-Regular.otf",
+  variable: "--font-family-title",
+  display: "swap",
+  fallback: ["Georgia", "Times New Roman", "serif"],
+});
+
+export const emperaVintage = localFont({
+  src: "../assets/fonts/Empera-Vintage.otf",
+  variable: "--font-family-title-vintage",
+  display: "swap",
+  fallback: ["Georgia", "Times New Roman", "serif"],
+});
 
 export const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -22,16 +37,11 @@ export const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-export const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-poppins",
-});
-
 export const fontVariables = [
+  empera.variable,
+  emperaVintage.variable,
   bebasNeue.variable,
   abrilFatface.variable,
   inter.variable,
   montserrat.variable,
-  poppins.variable,
 ].join(" ");
