@@ -4,15 +4,33 @@ import Link from "next/link";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { inter } from "@/lib/fonts";
 
+import { AnimatedLogo } from "./AnimatedLogo";
+
 type FooterProps = {
   dict: Dictionary["footer"];
 };
 
 const SOCIAL_LINKS = [
-  { key: "instagram" as const, icon: "/icons/instagram.webp" },
-  { key: "facebook" as const, icon: "/icons/facebook.webp" },
-  { key: "spotify" as const, icon: "/icons/spotify.webp" },
-  { key: "whatsapp" as const, icon: "/icons/whatsapp.webp" },
+  {
+    key: "instagram" as const,
+    icon: "/icons/instagram.webp",
+    href: "https://www.instagram.com/gentlemenmotoclube/",
+  },
+  {
+    key: "facebook" as const,
+    icon: "/icons/facebook.webp",
+    href: "https://www.facebook.com/gentlemencuritiba/",
+  },
+  {
+    key: "spotify" as const,
+    icon: "/icons/spotify.webp",
+    href: "https://open.spotify.com/playlist/4t1RUngIW1mRvJNH9eBt70?si=m1ZtVa6FTDWqFzJYJfEEkQ",
+  },
+  {
+    key: "whatsapp" as const,
+    icon: "/icons/whatsapp.webp",
+    href: "https://wa.me/5541998142003",
+  },
 ] as const;
 
 export function Footer({ dict }: FooterProps) {
@@ -72,12 +90,12 @@ export function Footer({ dict }: FooterProps) {
       >
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_auto_1fr] lg:gap-6">
           <div className="flex justify-center lg:justify-start">
-            <Image
-              src="/images/logo.webp"
+            <AnimatedLogo
               alt={dict.logoAlt}
               width={204}
               height={294}
-              className="h-auto w-24 sm:w-28 lg:w-32"
+              className="w-24 sm:w-28 lg:w-32"
+              flameVariant="footer"
             />
           </div>
 
@@ -86,10 +104,10 @@ export function Footer({ dict }: FooterProps) {
               {dict.followUs}
             </p>
             <div className="flex items-center gap-3 sm:gap-3.5">
-              {SOCIAL_LINKS.map(({ key, icon }) => (
+              {SOCIAL_LINKS.map(({ key, icon, href }) => (
                 <Link
                   key={key}
-                  href={dict.socialLinks[key]}
+                  href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={dict.social[key]}
