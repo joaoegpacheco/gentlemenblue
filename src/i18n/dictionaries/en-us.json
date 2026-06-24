@@ -168,6 +168,27 @@
     },
     "logoPlaceholder": "SPONSOR LOGOS"
   },
+  "gallery": {
+    "heading": {
+      "white": "GALLERY OF ",
+      "blue": "MOMENTS"
+    },
+    "subtitle": "CHECK OUT PHOTOS FROM PREVIOUS EDITIONS",
+    "imageAlt": "Gentlemen Blue moment",
+    "viewFullGallery": "VIEW FULL GALLERY",
+    "viewFullGalleryHref": "#galeria"
+  },
+  "store": {
+    "heading": {
+      "white": "STORE ",
+      "blue": "GENTLEMEN BLUE"
+    },
+    "hashtag": "#usegentlemenblue",
+    "productsGridAlt": "Gentlemen Blue products — t-shirts, caps and socks",
+    "shirtDetailsAlt": "Gentlemen Blue black t-shirt — print details and measurements",
+    "buyNow": "BUY NOW",
+    "buyNowHref": "#"
+  },
   "faq": {
     "heading": {
       "white": "FREQUENT QUESTIONS",
@@ -243,15 +264,9 @@
       "spotify": "Spotify",
       "whatsapp": "WhatsApp"
     },
-    "socialLinks": {
-      "instagram": "#",
-      "facebook": "#",
-      "spotify": "#",
-      "whatsapp": "#"
-    },
     "partnerLinks": {
-      "weareon": "#",
-      "j2p": "#"
+      "weareon": "https://www.weareon.com.br/",
+      "j2p": "https://www.linkedin.com/company/j2p-solu%C3%A7%C3%B5es-tecnol%C3%B3gicas"
     }
   }
 }
