@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
+import { assets, socialIcons } from "@/lib/assets";
 import { inter } from "@/lib/fonts";
 
 import { AnimatedLogo } from "./AnimatedLogo";
@@ -13,22 +14,22 @@ type FooterProps = {
 const SOCIAL_LINKS = [
   {
     key: "instagram" as const,
-    icon: "/icons/instagram.webp",
+    icon: socialIcons.instagram,
     href: "https://www.instagram.com/gentlemenmotoclube/",
   },
   {
     key: "facebook" as const,
-    icon: "/icons/facebook.webp",
+    icon: socialIcons.facebook,
     href: "https://www.facebook.com/gentlemencuritiba/",
   },
   {
     key: "spotify" as const,
-    icon: "/icons/spotify.webp",
+    icon: socialIcons.spotify,
     href: "https://open.spotify.com/playlist/4t1RUngIW1mRvJNH9eBt70?si=m1ZtVa6FTDWqFzJYJfEEkQ",
   },
   {
     key: "whatsapp" as const,
-    icon: "/icons/whatsapp.webp",
+    icon: socialIcons.whatsapp,
     href: "https://wa.me/5541998142003",
   },
 ] as const;
@@ -38,7 +39,7 @@ export function Footer({ dict }: FooterProps) {
     <footer className="bg-black">
       <div className="@container relative aspect-1024/213 w-full">
         <Image
-          src="/images/footer-banner.webp"
+          src={assets.images.footerBanner}
           alt=""
           width={1024}
           height={213}
@@ -51,7 +52,7 @@ export function Footer({ dict }: FooterProps) {
           <div className="flex flex-col items-center px-[2cqw] text-center">
             <div className="flex items-center justify-center gap-[0.55cqw]">
               <Image
-                src="/icons/star.webp"
+                src={assets.icons.star}
                 alt=""
                 width={126}
                 height={126}
@@ -62,7 +63,7 @@ export function Footer({ dict }: FooterProps) {
                 {dict.saveTheDate.label}
               </p>
               <Image
-                src="/icons/star.webp"
+                src={assets.icons.star}
                 alt=""
                 width={126}
                 height={126}
@@ -89,7 +90,7 @@ export function Footer({ dict }: FooterProps) {
         className={`${inter.className} mx-auto w-full max-w-[1440px] px-4 py-8 sm:px-6 lg:px-10 lg:py-10`}
       >
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_auto_1fr] lg:gap-6">
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-center overflow-visible lg:justify-start">
             <AnimatedLogo
               alt={dict.logoAlt}
               width={204}
@@ -137,7 +138,7 @@ export function Footer({ dict }: FooterProps) {
               aria-label={dict.weareonAlt}
             >
               <Image
-                src="/images/weareon.webp"
+                src={assets.images.weareon}
                 alt={dict.weareonAlt}
                 width={298}
                 height={172}
@@ -151,7 +152,7 @@ export function Footer({ dict }: FooterProps) {
               aria-label={dict.j2pAlt}
             >
               <Image
-                src="/images/j2p.webp"
+                src={assets.images.j2p}
                 alt={dict.j2pAlt}
                 width={156}
                 height={78}
