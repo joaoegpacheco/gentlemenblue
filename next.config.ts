@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/favicon.ico",
+        // Keep in sync with src/lib/assets.json → images.logo
         destination: "/images/logo.webp",
         permanent: true,
       },
