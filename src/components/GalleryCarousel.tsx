@@ -1,6 +1,6 @@
-"use client";
-
 import Image from "next/image";
+
+import { assets } from "@/lib/assets";
 
 type GalleryCarouselProps = {
   imageAlt: string;
@@ -28,7 +28,7 @@ export function GalleryCarousel({ imageAlt, slideCount }: GalleryCarouselProps) 
           className={`relative shrink-0 snap-start overflow-hidden rounded-lg ${SIZE_CLASS[size]}`}
         >
           <Image
-            src="/images/gallery-placeholder.webp"
+            src={assets.images.galleryPlaceholder}
             alt={imageAlt}
             fill
             sizes="(max-width: 1024px) 85vw, 749px"
