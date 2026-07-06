@@ -27,12 +27,12 @@ export function Movement({ dict }: MovementProps) {
           <h2
             className={`${abrilFatface.className} font-normal leading-tight tracking-wide`}
           >
-            <span className="block text-2xl text-white sm:text-3xl lg:text-4xl">
+            <span className="block text-2xl text-[#BDBDBD] sm:text-3xl lg:text-4xl">
               {dict.heading.line1}
             </span>
-            <span className="mt-1 block text-[clamp(1.75rem,4.5vw,3.75rem)] text-white lg:mt-2">
+            <span className="mt-1 block text-[clamp(1.75rem,4.5vw,3.75rem)] text-[#BDBDBD] lg:mt-2">
               {dict.heading.line2Prefix}{" "}
-              <span className="text-[#7DBAF8]">{dict.heading.line2Highlight}</span>
+              <span className="text-[#0E7AEB]">{dict.heading.line2Highlight}</span>
             </span>
           </h2>
 
@@ -40,7 +40,7 @@ export function Movement({ dict }: MovementProps) {
             {dict.subheading}
           </p>
 
-          <div className="mt-4 space-y-3 text-sm font-normal leading-relaxed text-white sm:mt-6 sm:space-y-4 sm:text-base lg:text-[15px] lg:leading-7">
+          <div className="mt-4 space-y-3 text-sm font-normal leading-relaxed text-[#BDBDBD] sm:mt-6 sm:space-y-4 sm:text-base lg:text-[15px] lg:leading-7">
             {dict.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -48,6 +48,9 @@ export function Movement({ dict }: MovementProps) {
 
           <p className="mt-6 text-sm font-semibold uppercase tracking-[0.08em] text-brand-blue sm:mt-8 sm:text-base lg:text-lg">
             {dict.closing}
+          </p>
+          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#7DBAF8] sm:text-base lg:text-lg">
+            {dict.closing2}
           </p>
         </div>
       </div>
