@@ -1,11 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-import { inter } from "@/lib/fonts";
+type SponsorLogo = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
 
 type SponsorsMarqueeProps = {
-  label: string;
+  logos: SponsorLogo[];
   itemCount?: number;
 };
 
@@ -13,12 +19,22 @@ const DEFAULT_ITEM_COUNT = 16;
 const AUTO_SCROLL_SPEED = 0.55;
 const INTERACTION_PAUSE_MS = 2500;
 
-function SponsorLogoSlot({ label }: { label: string }) {
+function SponsorLogoSlot({
+  src,
+  alt,
+  width,
+  height,
+}: SponsorLogo) {
   return (
-    <div
-      className={`${inter.className} flex h-16 w-[140px] shrink-0 items-center justify-center rounded-sm border border-white/15 px-3 py-4 text-center text-[10px] font-semibold uppercase tracking-[0.08em] text-white/70 sm:h-20 sm:w-[180px] sm:text-xs lg:w-[200px]`}
-    >
-      {label}
+    <div className="flex h-16 w-[140px] shrink-0 items-center justify-center px-3 sm:h-20 sm:w-[180px] lg:w-[200px]">
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        unoptimized
+        className="max-h-full max-w-full object-contain"
+      />
     </div>
   );
 }
@@ -35,7 +51,7 @@ function normalizeScrollLoop(scroller: HTMLDivElement) {
 }
 
 export function SponsorsMarquee({
-  label,
+  logos,
   itemCount = DEFAULT_ITEM_COUNT,
 }: SponsorsMarqueeProps) {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -112,8 +128,11 @@ export function SponsorsMarquee({
     };
   }, []);
 
-  const indices = Array.from({ length: itemCount }, (_, index) => index);
-  const loop = [...indices, ...indices];
+  const sequence = Array.from({ length: itemCount }, (_, index) => {
+    const logo = logos[index % logos.length];
+    return { ...logo, id: `${logo.alt}-${index}` };
+  });
+  const loop = [...sequence, ...sequence];
 
   return (
     <div className="relative left-1/2 mt-10 w-screen max-w-none -translate-x-1/2 mask-[linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] lg:mt-12">
@@ -122,8 +141,14 @@ export function SponsorsMarquee({
         className="sponsors-marquee-scroller overflow-x-auto overscroll-x-contain scroll-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         <div className="flex w-max gap-4 px-3 sm:gap-6 sm:px-6 lg:px-10">
-          {loop.map((index, position) => (
-            <SponsorLogoSlot key={`${index}-${position}`} label={label} />
+          {loop.map((logo, position) => (
+            <SponsorLogoSlot
+              key={`${logo.id}-${position}`}
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
+            />
           ))}
         </div>
       </div>
