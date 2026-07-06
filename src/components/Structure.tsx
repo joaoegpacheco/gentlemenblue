@@ -29,7 +29,7 @@ export function Structure({ dict }: StructureProps) {
         <div className="relative z-10 mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-6 px-3 py-8 sm:px-6 lg:grid-cols-[minmax(0,0.36fr)_minmax(0,0.64fr)] lg:gap-4 lg:px-10 lg:py-10">
           <div className={`${inter.className} lg:pr-4`}>
             <h2 className={`${abrilFatface.className} leading-[1.05] tracking-wide`}>
-              <span className="block text-xl text-white sm:text-2xl lg:text-[1.75rem]">
+              <span className="block text-xl text-[#BDBDBD] sm:text-2xl lg:text-[1.75rem]">
                 {dict.heading.line1}
               </span>
               <span className="mt-1 block text-[clamp(1.875rem,4.8vw,3.25rem)] text-brand-blue lg:mt-2 lg:text-[3rem]">
@@ -37,7 +37,7 @@ export function Structure({ dict }: StructureProps) {
               </span>
             </h2>
 
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white sm:mt-5 sm:text-base lg:mt-6 lg:text-[15px] lg:leading-7">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#BDBDBD] sm:mt-5 sm:text-base lg:mt-6 lg:text-[15px] lg:leading-7">
               {dict.description}
             </p>
 
@@ -75,7 +75,7 @@ export function Structure({ dict }: StructureProps) {
             <h3
               className={`${abrilFatface.className} text-[clamp(1.5rem,4vw,2.75rem)] font-normal tracking-wide`}
             >
-              <span className="text-white">{dict.stats.titlePrefix} </span>
+              <span className="text-[#BDBDBD]">{dict.stats.titlePrefix} </span>
               <span className="text-brand-blue">{dict.stats.titleHighlight}</span>
             </h3>
             <Image
@@ -93,7 +93,7 @@ export function Structure({ dict }: StructureProps) {
           {dict.stats.items.map((item) => (
             <article
               key={item.label}
-              className={`${inter.className} flex min-h-[9.5rem] flex-col items-center justify-center rounded-sm border border-white/25 bg-transparent px-3 py-5 text-center sm:min-h-[10.5rem] sm:px-4 sm:py-6`}
+              className={`${inter.className} flex min-h-[9.5rem] flex-col items-center justify-center rounded-sm border border-white/25 bg-[#0E7AEB]/5 px-3 py-5 text-center sm:min-h-[10.5rem] sm:px-4 sm:py-6`}
             >
               <div>
                 <StructureStatValue
