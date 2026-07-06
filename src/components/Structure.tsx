@@ -5,6 +5,7 @@ import { assets } from "@/lib/assets";
 import { abrilFatface, inter } from "@/lib/fonts";
 
 import { StructureBlueprintDialog } from "./StructureBlueprintDialog";
+import { StructureStatValue } from "./StructureStatValue";
 
 type StructureProps = {
   dict: Dictionary["structure"];
@@ -92,17 +93,17 @@ export function Structure({ dict }: StructureProps) {
           {dict.stats.items.map((item) => (
             <article
               key={item.label}
-              className={`${inter.className} flex min-h-[9.5rem] flex-col items-center justify-between rounded-sm border border-white/25 bg-transparent px-3 py-5 text-center sm:min-h-[10.5rem] sm:px-4 sm:py-6`}
+              className={`${inter.className} flex min-h-[9.5rem] flex-col items-center justify-center rounded-sm border border-white/25 bg-transparent px-3 py-5 text-center sm:min-h-[10.5rem] sm:px-4 sm:py-6`}
             >
               <div>
-                <p className="font-bebas text-[clamp(1.75rem,4vw,2.5rem)] leading-none text-white">
-                  {item.value}
-                </p>
+                <StructureStatValue
+                  value={item.value}
+                  className={`${inter.className} text-[clamp(1.75rem,4vw,2.5rem)] font-bold leading-none items-center text-white`}
+                />
                 <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-white sm:text-xs">
                   {item.label}
                 </p>
               </div>
-              <p className="text-[10px] text-brand-gray sm:text-xs">{item.subtext}</p>
             </article>
           ))}
         </div>
