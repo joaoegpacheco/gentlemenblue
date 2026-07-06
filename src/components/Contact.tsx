@@ -1,17 +1,54 @@
+"use client";
+
+import type { FormEvent } from "react";
+
 import type { Dictionary } from "@/i18n/get-dictionary";
-import { inter } from "@/lib/fonts";
+import { blackHanSans, inter } from "@/lib/fonts";
 
 type ContactProps = {
   dict: Dictionary["contact"];
 };
 
+const WHATSAPP_NUMBER = "5541998142003";
+
 const FIELD_CLASS =
   "w-full border-0 border-b border-brand-blue bg-transparent pb-2 font-montserrat text-sm font-light text-white outline-none placeholder:text-white/40 focus:border-brand-blue";
 
-const TITLE_CLASS =
-  "font-bebas col-start-1 row-start-1 text-[clamp(2rem,5vw,3.5rem)] leading-none tracking-[0.05em] whitespace-nowrap";
+const TITLE_CLASS = `${blackHanSans.className} col-start-1 row-start-1 text-[40px] leading-none tracking-[0.05em] whitespace-nowrap`;
+
+function buildWhatsAppUrl(
+  dict: Dictionary["contact"],
+  data: { name: string; email: string; phone: string; message: string },
+) {
+  const text = [
+    dict.whatsappIntro,
+    "",
+    `${dict.fields.name}: ${data.name}`,
+    `${dict.fields.email}: ${data.email}`,
+    `${dict.fields.phone}: ${data.phone}`,
+    "",
+    `${dict.fields.message}:`,
+    data.message,
+  ].join("\n");
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
 
 export function Contact({ dict }: ContactProps) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const url = buildWhatsAppUrl(dict, {
+      name: formData.get("name")?.toString().trim() ?? "",
+      email: formData.get("email")?.toString().trim() ?? "",
+      phone: formData.get("phone")?.toString().trim() ?? "",
+      message: formData.get("message")?.toString().trim() ?? "",
+    });
+
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+
   return (
     <section id="contato" className="bg-black">
       <div
@@ -32,17 +69,16 @@ export function Contact({ dict }: ContactProps) {
             </div>
           </div>
 
-          <div className="mt-10 space-y-0.5 font-montserrat text-[clamp(0.625rem,1.5vw,0.75rem)] font-light uppercase leading-relaxed tracking-[0.05em] text-white sm:mt-12">
+          {/* <div className="mt-10 space-y-0.5 font-montserrat text-[clamp(0.625rem,1.5vw,0.75rem)] font-light uppercase leading-relaxed tracking-[0.05em] text-white sm:mt-12">
             {dict.noteLines.map((line) => (
               <p key={line}>{line}</p>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <form
           className="flex w-full max-w-84 flex-col gap-7 sm:max-w-88 lg:flex-1 lg:gap-8"
-          action="#"
-          method="post"
+          onSubmit={handleSubmit}
         >
           <div>
             <label
