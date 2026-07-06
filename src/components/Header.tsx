@@ -21,7 +21,7 @@ export function Header({ dict }: HeaderProps) {
   const navLinks: NavLink[] = [
     { href: "#evento", label: dict.nav.event, active: true },
     { href: "#atracoes", label: dict.nav.attractions },
-    { href: "#programacao", label: dict.nav.schedule },
+    // { href: "#programacao", label: dict.nav.schedule },
     { href: "#estrutura", label: dict.nav.structure },
     { href: "#patrocinadores", label: dict.nav.sponsors },
     { href: "#galeria", label: dict.nav.gallery },
@@ -70,14 +70,14 @@ export function Header({ dict }: HeaderProps) {
         </nav>
 
         <Link
-          href="#participar"
+          href="#contato"
           className="hidden shrink-0 items-center justify-center rounded-full bg-brand-blue px-6 py-2.5 font-bebas text-xs tracking-[0.12em] text-white transition-opacity hover:opacity-90 xl:px-7 xl:text-sm lg:inline-flex"
         >
           {dict.wantToParticipate}
         </Link>
 
         <Link
-          href="#participar"
+          href="#contato"
           className="inline-flex shrink-0 items-center justify-center rounded-full bg-brand-blue px-4 py-2 font-bebas text-xs tracking-[0.12em] text-white transition-opacity hover:opacity-90 lg:hidden"
         >
           {dict.participate}

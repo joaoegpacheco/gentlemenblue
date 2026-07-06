@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { assets } from "@/lib/assets";
-import { abrilFatface, inter } from "@/lib/fonts";
+import { abrilFatface, oswald } from "@/lib/fonts";
 
 type StoreProps = {
   dict: Dictionary["store"];
@@ -47,11 +47,11 @@ export function Store({ dict }: StoreProps) {
           <h2
             className={`${abrilFatface.className} text-[clamp(1.5rem,4.5vw,3rem)] font-normal leading-tight tracking-wide`}
           >
-            <span className="text-white">{dict.heading.white}</span>
-            <span className="text-brand-blue">{dict.heading.blue}</span>
+            <span className="text-[#B3B3B3]">{dict.heading.white}</span>
+            <span className="text-[#0E7AEB]">{dict.heading.blue}</span>
           </h2>
           <p
-            className={`${inter.className} mt-4 text-xs font-semibold uppercase tracking-[0.12em] text-brand-blue sm:mt-5 sm:text-sm lg:text-base`}
+            className={`${oswald.className} mt-4 text-xs font-semibold uppercase tracking-[0.12em] text-white sm:mt-5 sm:text-sm lg:text-base`}
           >
             {dict.hashtag}
           </p>

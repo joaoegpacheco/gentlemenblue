@@ -19,11 +19,11 @@ export function Gallery({ dict }: GalleryProps) {
           <h2
             className={`${abrilFatface.className} text-[clamp(1.5rem,4.5vw,3rem)] font-normal leading-tight tracking-wide`}
           >
-            <span className="text-white">{dict.heading.white}</span>
-            <span className="text-brand-blue">{dict.heading.blue}</span>
+            <span className="text-[#B3B3B3]">{dict.heading.white}</span>
+            <span className="text-[#0E7AEB]">{dict.heading.blue}</span>
           </h2>
           <p
-            className={`${inter.className} mt-4 text-xs font-semibold uppercase tracking-[0.12em] text-white sm:mt-5 sm:text-sm lg:text-base`}
+            className={`${inter.className} mt-4 text-xs font-semibold uppercase tracking-[0.12em] text-[#B3B3B3] sm:mt-5 sm:text-sm lg:text-base`}
           >
             {dict.subtitle}
           </p>
@@ -35,14 +35,14 @@ export function Gallery({ dict }: GalleryProps) {
           </div>
         </div>
 
-        <div className="mt-10 flex justify-center sm:mt-12">
+        {/* <div className="mt-10 flex justify-center sm:mt-12">
           <Link
             href={dict.viewFullGalleryHref}
             className="inline-flex items-center justify-center rounded-full bg-brand-blue px-8 py-2.5 font-bebas text-sm tracking-[0.12em] text-white transition-opacity hover:opacity-90 sm:px-10 sm:py-3 sm:text-base"
           >
             {dict.viewFullGallery}
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

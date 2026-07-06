@@ -27,8 +27,8 @@ export function Faq({ dict }: FaqProps) {
             <h2
               className={`${abrilFatface.className} text-[clamp(1.5rem,4vw,2.75rem)] font-normal leading-tight tracking-wide`}
             >
-              <span className="text-white">{dict.heading.white}</span>
-              <span className="text-brand-blue">{dict.heading.blue}</span>
+              <span className="text-[#B3B3B3]">{dict.heading.white}</span>
+              <span className="text-[#0E7AEB]">{dict.heading.blue}</span>
             </h2>
             <Image
               src={assets.icons.star}

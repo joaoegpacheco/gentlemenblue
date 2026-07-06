@@ -12,7 +12,7 @@ export function Movement({ dict }: MovementProps) {
   return (
     <section id="movimento" className="bg-black">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-8 px-3 py-5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-12 lg:px-5 lg:py-3">
-        <div className="mx-auto w-full max-w-[280px] sm:max-w-xs lg:mx-0 lg:max-w-[min(100%,22rem)] xl:max-w-[min(100%,26rem)]">
+        <div className="mx-auto flex justify-center items-center w-full max-w-[280px] sm:max-w-xs lg:mx-0 lg:max-w-[min(100%,22rem)] xl:max-w-[min(100%,26rem)]">
           <Image
             src={assets.images.movementCharacter}
             alt={dict.imageAlt}
@@ -32,7 +32,7 @@ export function Movement({ dict }: MovementProps) {
             </span>
             <span className="mt-1 block text-[clamp(1.75rem,4.5vw,3.75rem)] text-white lg:mt-2">
               {dict.heading.line2Prefix}{" "}
-              <span className="text-brand-blue">{dict.heading.line2Highlight}</span>
+              <span className="text-[#7DBAF8]">{dict.heading.line2Highlight}</span>
             </span>
           </h2>
 

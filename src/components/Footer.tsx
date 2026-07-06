@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { assets, socialIcons } from "@/lib/assets";
-import { inter } from "@/lib/fonts";
+import { abrilFatface, inter } from "@/lib/fonts";
 
 import { AnimatedLogo } from "./AnimatedLogo";
 
@@ -37,47 +37,47 @@ const SOCIAL_LINKS = [
 export function Footer({ dict }: FooterProps) {
   return (
     <footer className="bg-black">
-      <div className="@container relative aspect-1024/213 w-full">
+      <div className="@container relative w-full">
         <Image
           src={assets.images.footerBanner}
           alt=""
           width={1024}
-          height={213}
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          height={453}
+          unoptimized
+          className="block h-auto w-full max-w-none"
           sizes="100vw"
+          priority
           aria-hidden
         />
 
-        <div className="absolute inset-0 flex items-center justify-center pr-[26%] sm:pr-[28%] lg:pr-[30%]">
-          <div className="flex flex-col items-center px-[2cqw] text-center">
+        <div className="absolute inset-0 flex mt-16">
+          <div
+            className={`${abrilFatface.className} flex w-[58%] flex-col items-center px-[2cqw] text-center`}
+          >
             <div className="flex items-center justify-center gap-[0.55cqw]">
-              <Image
-                src={assets.icons.star}
-                alt=""
-                width={126}
-                height={126}
+              <span
                 aria-hidden
-                className="h-[clamp(8px,1.56cqw,18px)] w-[clamp(8px,1.56cqw,18px)] shrink-0"
-              />
-              <p className="font-title text-[clamp(8px,1.56cqw,18px)] tracking-[0.18em] text-white">
+                className="text-[clamp(8px,1.56cqw,18px)] leading-none text-brand-blue"
+              >
+                ★
+              </span>
+              <p className="text-[clamp(8px,1.56cqw,50px)] tracking-[0.18em] text-[#B3B3B3]">
                 {dict.saveTheDate.label}
               </p>
-              <Image
-                src={assets.icons.star}
-                alt=""
-                width={126}
-                height={126}
+              <span
                 aria-hidden
-                className="h-[clamp(8px,1.56cqw,18px)] w-[clamp(8px,1.56cqw,18px)] shrink-0"
-              />
+                className="text-[clamp(8px,1.56cqw,18px)] leading-none text-brand-blue"
+              >
+                ★
+              </span>
             </div>
-            <p className="font-title mt-[0.35cqw] text-[clamp(20px,5.27cqw,60px)] leading-[0.95] tracking-[0.02em] text-white">
+            <p className="mt-[0.35cqw] text-[clamp(20px,5.27cqw,100px)] leading-[0.95] tracking-[0.02em] text-[#B3B3B3]">
               {dict.saveTheDate.date}
             </p>
-            <p className="font-title mt-[0.65cqw] text-[clamp(8px,1.37cqw,16px)] tracking-[0.06em] text-white">
+            <p className="mt-[0.65cqw] text-[clamp(8px,1.37cqw,50px)] tracking-[0.06em] text-[#B3B3B3]">
               {dict.saveTheDate.location}
             </p>
-            <p className="font-montserrat mt-[0.75cqw] text-[clamp(7px,1.17cqw,14px)] font-semibold uppercase leading-snug tracking-[0.04em] text-brand-blue">
+            <p className="font-montserrat mt-[0.75cqw] text-[clamp(7px,1.17cqw,30px)] font-semibold uppercase leading-snug tracking-[0.04em] text-brand-blue">
               {dict.saveTheDate.taglineLine1}
               <br />
               {dict.saveTheDate.taglineLine2}
@@ -154,8 +154,8 @@ export function Footer({ dict }: FooterProps) {
               <Image
                 src={assets.images.j2p}
                 alt={dict.j2pAlt}
-                width={156}
-                height={78}
+                width={321}
+                height={162}
                 className="h-auto w-16 sm:w-20"
               />
             </Link>
