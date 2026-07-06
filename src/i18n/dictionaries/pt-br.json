@@ -32,7 +32,7 @@
         "secondary": "SÁBADO"
       },
       "time": {
-        "primary": "DAS 11H ÀS 00H",
+        "primary": "das 11h às 00h",
         "secondary": "EVENTO COMPLETO"
       },
       "location": {
@@ -73,42 +73,42 @@
         "iconAlt": "Churrasco beneficente",
         "titleLine1": "CHURRASCO",
         "titleLine2": "BENEFICENTE",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "Costelada gourmet para todos os amantes de churrasco."
       },
       {
         "icon": "guitar",
         "iconAlt": "Bandas ao vivo",
         "titleLine1": "BANDAS",
         "titleLine2": "AO VIVO",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "As melhores bandas locais de rock e country ao vivo."
       },
       {
         "icon": "podcast",
         "iconAlt": "Podcasts e entrevistas",
         "titleLine1": "PODCASTS",
         "titleLine2": "E ENTREVISTAS",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "Ouça os melhores podcasts e entrevistas sobre saúde masculina."
       },
       {
         "icon": "speaker",
         "iconAlt": "Palestras especiais",
         "titleLine1": "PALESTRAS",
         "titleLine2": "ESPECIAIS",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "Palestras especiais sobre saúde masculina e prevenção do câncer de próstata."
       },
       {
         "icon": "motor",
         "iconAlt": "Exposição Harley Davidson",
         "titleLine1": "EXPOSIÇÃO",
         "titleLine2": "HARLEY DAVIDSON",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "Exposição de motocicletas Harley Davidson e experiências de pilotagem."
       },
       {
         "icon": "exhibitor",
         "iconAlt": "Expositores e parceiros",
         "titleLine1": "EXPOSITORES",
         "titleLine2": "E PARCEIROS",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "Expositores e parceiros do evento, com produtos e serviços relacionados ao motociclismo e saúde masculina."
       }
     ]
   },
@@ -157,8 +157,9 @@
   "sirBlue": {
     "title": "SIR BLUE",
     "subtitle": "MASCOTE OFICIAL",
-    "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "tagline": "HOMENS QUE SE CUIDAM, VIVEM MAIS."
+    "paragraph": "O Sir Blue representa todos os homens que tem atitude, que protegem quem amam e que entendem que cuidar da saúde é um ato de coragem.",
+    "tagline": "HOMENS QUE SE CUIDAM, ",
+    "tagline2": "VIVEM MAIS."
   },
   "sponsors": {
     "heading": {
@@ -167,7 +168,15 @@
       "blue2": "E PARCEIROS ",
       "white2": "OFICIAIS"
     },
-    "logoPlaceholder": "LOGOS PATROCINADORES"
+    "logoPlaceholder": "LOGOS PATROCINADORES",
+    "logos": {
+      "gentlemenBrasil": "Gentlemen Brasil",
+      "weareon": "Agência WeAreOn",
+      "j2p": "J2P",
+      "armazemGaragem": "Armazém Garagem",
+      "sicredi": "Sicredi",
+      "backstageFormaturas": "Backstage Formaturas"
+    }
   },
   "gallery": {
     "heading": {
@@ -188,7 +197,7 @@
     "productsGridAlt": "Produtos Gentlemen Blue — camisetas, bonés e meias",
     "shirtDetailsAlt": "Camiseta preta Gentlemen Blue — detalhes de estampa e medidas",
     "buyNow": "COMPRAR AGORA",
-    "buyNowHref": "#"
+    "buyNowHref": "https://gtmcustom.com.br/vestuario/camisetas/"
   },
   "faq": {
     "heading": {
@@ -232,6 +241,7 @@
   },
   "contact": {
     "title": "FALE CONOSCO",
+    "whatsappIntro": "Olá! Vim pelo site Gentlemen Blue.",
     "noteLines": [
       "TALVEZ AQUI INCLUIR UM CAMPO",
       "PARA PATROCINADORES.",

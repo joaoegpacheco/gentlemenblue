@@ -73,42 +73,42 @@
         "iconAlt": "Charity barbecue",
         "titleLine1": "CHARITY",
         "titleLine2": "BARBECUE",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "A gourmet barbecue for all lovers of barbecue."
       },
       {
         "icon": "guitar",
         "iconAlt": "Live bands",
         "titleLine1": "LIVE",
         "titleLine2": "BANDS",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "The best local rock and country bands live."
       },
       {
         "icon": "podcast",
         "iconAlt": "Podcasts and interviews",
         "titleLine1": "PODCASTS",
         "titleLine2": "AND INTERVIEWS",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "Listen to the best podcasts and interviews about men's health."
       },
       {
         "icon": "speaker",
         "iconAlt": "Special talks",
         "titleLine1": "SPECIAL",
         "titleLine2": "TALKS",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "Special talks about men's health and prostate cancer prevention."
       },
       {
         "icon": "motor",
         "iconAlt": "Harley Davidson exhibition",
         "titleLine1": "HARLEY DAVIDSON",
         "titleLine2": "EXHIBITION",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "Harley Davidson motorcycle exhibition and driving experiences."
       },
       {
         "icon": "exhibitor",
         "iconAlt": "Exhibitors and partners",
         "titleLine1": "EXHIBITORS",
         "titleLine2": "AND PARTNERS",
-        "description": "Lorem Ipsum is simply dummy text of the printing and"
+        "description": "Exhibitors and partners of the event, with products and services related to motorcycles and men's health."
       }
     ]
   },
@@ -157,8 +157,9 @@
   "sirBlue": {
     "title": "SIR BLUE",
     "subtitle": "OFFICIAL MASCOT",
-    "paragraph": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    "tagline": "MEN WHO TAKE CARE OF THEMSELVES LIVE MORE."
+    "paragraph": "Sir Blue represents all men who have attitude, who protect those they love and who understand that taking care of health is a brave act.",
+    "tagline": "MEN WHO TAKE CARE OF THEMSELVES ",
+    "tagline2": "LIVE MORE."
   },
   "sponsors": {
     "heading": {
@@ -167,7 +168,15 @@
       "blue2": "AND PARTNERS ",
       "white2": "OFFICIAL"
     },
-    "logoPlaceholder": "SPONSOR LOGOS"
+    "logoPlaceholder": "SPONSOR LOGOS",
+    "logos": {
+      "gentlemenBrasil": "Gentlemen Brasil",
+      "weareon": "WeAreOn Agency",
+      "j2p": "J2P",
+      "armazemGaragem": "Armazém Garagem",
+      "sicredi": "Sicredi",
+      "backstageFormaturas": "Backstage Formaturas"
+    }
   },
   "gallery": {
     "heading": {
@@ -188,7 +197,7 @@
     "productsGridAlt": "Gentlemen Blue products — t-shirts, caps and socks",
     "shirtDetailsAlt": "Gentlemen Blue black t-shirt — print details and measurements",
     "buyNow": "BUY NOW",
-    "buyNowHref": "#"
+    "buyNowHref": "https://gtmcustom.com.br/vestuario/camisetas/"
   },
   "faq": {
     "heading": {
@@ -232,6 +241,7 @@
   },
   "contact": {
     "title": "CONTACT US",
+    "whatsappIntro": "Hello! I came from the Gentlemen Blue website.",
     "noteLines": [
       "PERHAPS INCLUDE A FIELD HERE",
       "FOR SPONSORS.",
