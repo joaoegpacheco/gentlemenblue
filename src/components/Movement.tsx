@@ -10,16 +10,16 @@ type MovementProps = {
 
 export function Movement({ dict }: MovementProps) {
   return (
-    <section id="movimento" className="bg-black">
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-8 px-3 py-5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-12 lg:px-5 lg:py-3">
-        <div className="mx-auto flex justify-center items-center w-full max-w-[280px] sm:max-w-xs lg:mx-0 lg:max-w-[min(100%,22rem)] xl:max-w-[min(100%,26rem)]">
+    <section id="movimento" className="overflow-x-clip bg-black">
+      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-8 px-5 py-12 sm:px-6 sm:py-14 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-12 lg:px-10 lg:py-16">
+        <div className="mx-auto flex w-full max-w-[240px] items-center justify-center sm:max-w-xs lg:mx-0 lg:max-w-[min(100%,22rem)] xl:max-w-[min(100%,26rem)]">
           <Image
             src={assets.images.movementCharacter}
             alt={dict.imageAlt}
             width={931}
             height={1024}
             className="h-auto w-full"
-            sizes="(max-width: 1024px) 280px, 26rem"
+            sizes="(max-width: 1024px) 240px, 26rem"
           />
         </div>
 

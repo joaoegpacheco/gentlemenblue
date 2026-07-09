@@ -26,7 +26,7 @@ function SponsorLogoSlot({
   height,
 }: SponsorLogo) {
   return (
-    <div className="flex h-16 w-[140px] shrink-0 items-center justify-center px-3 sm:h-20 sm:w-[180px] lg:w-[200px]">
+    <div className="flex h-16 w-[22vw] max-w-[220px] shrink-0 items-center justify-center px-3 sm:h-20 sm:w-[18vw] sm:max-w-[260px] lg:h-24 lg:w-[14vw] lg:max-w-none 2xl:h-28 min-[2560px]:h-36 min-[3840px]:h-48">
       <Image
         src={src}
         alt={alt}
@@ -135,12 +135,12 @@ export function SponsorsMarquee({
   const loop = [...sequence, ...sequence];
 
   return (
-    <div className="relative left-1/2 mt-10 w-screen max-w-none -translate-x-1/2 mask-[linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] lg:mt-12">
+    <div className="relative mt-8 w-full mask-[linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] sm:mt-10 lg:mt-12">
       <div
         ref={scrollerRef}
         className="sponsors-marquee-scroller overflow-x-auto overscroll-x-contain scroll-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
-        <div className="flex w-max gap-4 px-3 sm:gap-6 sm:px-6 lg:px-10">
+        <div className="flex w-max gap-4 px-5 sm:gap-6 sm:px-6 lg:gap-8 lg:px-10 2xl:gap-10 min-[2560px]:gap-12 min-[3840px]:gap-16">
           {loop.map((logo, position) => (
             <SponsorLogoSlot
               key={`${logo.id}-${position}`}

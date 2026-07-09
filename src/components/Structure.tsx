@@ -13,7 +13,7 @@ type StructureProps = {
 
 export function Structure({ dict }: StructureProps) {
   return (
-    <section id="estrutura" className="bg-black">
+    <section id="estrutura" className="overflow-x-clip bg-black">
       <div className="relative w-full">
         <div className="pointer-events-none absolute inset-0 w-full overflow-hidden">
           <Image
@@ -26,7 +26,7 @@ export function Structure({ dict }: StructureProps) {
           />
         </div>
 
-        <div className="relative z-10 mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-6 px-3 py-8 sm:px-6 lg:grid-cols-[minmax(0,0.36fr)_minmax(0,0.64fr)] lg:gap-4 lg:px-10 lg:py-10">
+        <div className="relative z-10 mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-6 px-5 py-12 sm:px-6 sm:py-14 lg:grid-cols-[minmax(0,0.36fr)_minmax(0,0.64fr)] lg:gap-4 lg:px-10 lg:py-16">
           <div className={`${inter.className} lg:pr-4`}>
             <h2 className={`${abrilFatface.className} leading-[1.05] tracking-wide`}>
               <span className="block text-xl text-[#BDBDBD] sm:text-2xl lg:text-[1.75rem]">
@@ -61,19 +61,19 @@ export function Structure({ dict }: StructureProps) {
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-[1440px] px-3 pb-8 pt-10 sm:px-6 lg:px-10 lg:pb-12 lg:pt-14">
+      <div className="mx-auto w-full max-w-[1440px] px-5 pb-12 pt-10 sm:px-6 sm:pb-14 lg:px-10 lg:pb-16 lg:pt-14">
         <header className="text-center">
-          <div className="flex items-center justify-center gap-3 sm:gap-5">
+          <div className="flex items-center justify-center gap-2.5 sm:gap-5">
             <Image
               src={assets.icons.star}
               alt=""
               width={126}
               height={126}
               aria-hidden
-              className="h-9 w-9 shrink-0 sm:h-11 sm:w-11 lg:h-12 lg:w-12"
+              className="h-7 w-7 shrink-0 sm:h-11 sm:w-11 lg:h-12 lg:w-12"
             />
             <h3
-              className={`${abrilFatface.className} text-[clamp(1.5rem,4vw,2.75rem)] font-normal tracking-wide`}
+              className={`${abrilFatface.className} text-[clamp(1.35rem,5.5vw,2.75rem)] font-normal tracking-wide`}
             >
               <span className="text-[#BDBDBD]">{dict.stats.titlePrefix} </span>
               <span className="text-brand-blue">{dict.stats.titleHighlight}</span>
@@ -84,16 +84,16 @@ export function Structure({ dict }: StructureProps) {
               width={126}
               height={126}
               aria-hidden
-              className="h-9 w-9 shrink-0 sm:h-11 sm:w-11 lg:h-12 lg:w-12"
+              className="h-7 w-7 shrink-0 sm:h-11 sm:w-11 lg:h-12 lg:w-12"
             />
           </div>
         </header>
 
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:mt-10 sm:gap-4 md:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-8 grid grid-cols-2 gap-2.5 sm:mt-10 sm:gap-4 md:grid-cols-3 lg:grid-cols-5">
           {dict.stats.items.map((item) => (
             <article
               key={item.label}
-              className={`${inter.className} flex min-h-[9.5rem] flex-col items-center justify-center rounded-sm border border-white/25 bg-[#0E7AEB]/5 px-3 py-5 text-center sm:min-h-[10.5rem] sm:px-4 sm:py-6`}
+              className={`${inter.className} flex min-h-[8.5rem] flex-col items-center justify-center rounded-sm border border-white/25 bg-[#0E7AEB]/5 px-2.5 py-4 text-center sm:min-h-[10.5rem] sm:px-4 sm:py-6`}
             >
               <div>
                 <StructureStatValue

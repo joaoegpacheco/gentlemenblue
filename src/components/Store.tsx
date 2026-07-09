@@ -42,7 +42,7 @@ function StoreCartIcon() {
 export function Store({ dict }: StoreProps) {
   return (
     <section id="loja" className="overflow-hidden bg-black">
-      <div className="mx-auto w-full max-w-[1440px] px-3 pb-10 sm:px-6 lg:px-10 lg:pb-14">
+      <div className="mx-auto w-full max-w-[1440px] px-5 py-12 sm:px-6 sm:py-14 lg:px-10 lg:py-16">
         <header className="text-center">
           <h2
             className={`${abrilFatface.className} text-[clamp(1.5rem,4.5vw,3rem)] font-normal leading-tight tracking-wide`}
@@ -51,13 +51,13 @@ export function Store({ dict }: StoreProps) {
             <span className="text-[#0E7AEB]">{dict.heading.blue}</span>
           </h2>
           <p
-            className={`${oswald.className} mt-4 text-xs font-semibold uppercase tracking-[0.12em] text-white sm:mt-5 sm:text-sm lg:text-base`}
+            className={`${oswald.className} mt-3 text-xs font-semibold uppercase tracking-[0.12em] text-white sm:mt-5 sm:text-sm lg:text-base`}
           >
             {dict.hashtag}
           </p>
         </header>
 
-        <div className="mt-10 space-y-3 sm:mt-12 sm:space-y-4 lg:mt-14">
+        <div className="mt-8 space-y-3 sm:mt-10 sm:space-y-4 lg:mt-14">
           <Image
             src={assets.images.storeProductsGrid}
             alt={dict.productsGridAlt}
@@ -76,7 +76,7 @@ export function Store({ dict }: StoreProps) {
           />
         </div>
 
-        <div className="mt-10 flex justify-center sm:mt-12 lg:mt-14">
+        <div className="mt-8 flex justify-center sm:mt-10 lg:mt-14">
           <Link
             href={dict.buyNowHref}
             className="inline-flex items-center gap-3 rounded-xl bg-brand-blue px-8 py-3 font-bebas text-sm tracking-[0.12em] text-white transition-opacity hover:opacity-90 sm:px-10 sm:py-3.5 sm:text-base"

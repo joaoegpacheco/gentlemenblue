@@ -24,7 +24,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
   const dict = await getDictionary(locale);
 
   return (
-    <main className="bg-[#000000]">
+    <main className="overflow-x-clip bg-black">
       <Hero dict={dict} />
       <Movement dict={dict.movement} />
       <AttractionsStructureScroll

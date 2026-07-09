@@ -32,7 +32,7 @@ export function Header({ dict }: HeaderProps) {
 
   return (
     <header className="relative z-20 w-full">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-end gap-4 px-6 py-3 lg:justify-between lg:px-10 lg:py-4">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-end gap-3 px-5 py-3 sm:gap-4 sm:px-6 lg:justify-between lg:px-10 lg:py-4 2xl:max-w-[1800px] 2xl:px-14 2xl:py-5 min-[2560px]:max-w-[2400px] min-[2560px]:px-16 min-[2560px]:py-6 min-[3840px]:max-w-[3000px] min-[3840px]:px-20 min-[3840px]:py-8">
         <button
           type="button"
           aria-expanded={menuOpen}
@@ -54,13 +54,13 @@ export function Header({ dict }: HeaderProps) {
 
         <nav
           aria-label={dict.mainNav}
-          className="hidden flex-1 items-center justify-center gap-x-4 xl:gap-x-6 lg:flex"
+          className="hidden flex-1 items-center justify-center gap-x-4 xl:gap-x-6 lg:flex 2xl:gap-x-7 min-[2560px]:gap-x-9 min-[3840px]:gap-x-11"
         >
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`font-bebas text-xs tracking-[0.12em] transition-colors hover:text-brand-blue xl:text-sm ${
+              className={`font-bebas text-xs tracking-[0.12em] transition-colors hover:text-brand-blue xl:text-sm 2xl:text-base min-[2560px]:text-xl min-[3840px]:text-2xl ${
                 link.active ? "text-brand-blue" : "text-brand-gray"
               }`}
             >
@@ -71,7 +71,7 @@ export function Header({ dict }: HeaderProps) {
 
         <Link
           href="#contato"
-          className="hidden shrink-0 items-center justify-center rounded-full bg-brand-blue px-6 py-2.5 font-bebas text-xs tracking-[0.12em] text-white transition-opacity hover:opacity-90 xl:px-7 xl:text-sm lg:inline-flex"
+          className="hidden shrink-0 items-center justify-center rounded-full bg-brand-blue px-6 py-2.5 font-bebas text-xs tracking-[0.12em] text-white transition-opacity hover:opacity-90 xl:px-7 xl:text-sm lg:inline-flex 2xl:px-9 2xl:py-3 2xl:text-base min-[2560px]:px-11 min-[2560px]:py-3.5 min-[2560px]:text-xl min-[3840px]:px-14 min-[3840px]:py-4 min-[3840px]:text-2xl"
         >
           {dict.wantToParticipate}
         </Link>
@@ -88,9 +88,9 @@ export function Header({ dict }: HeaderProps) {
         <nav
           id="mobile-nav"
           aria-label={dict.mobileNav}
-          className="border-t border-brand-gray/20 bg-black/90 px-6 py-6 backdrop-blur-sm lg:hidden"
+          className="border-t border-brand-gray/20 bg-black/90 px-5 py-5 backdrop-blur-sm sm:px-6 sm:py-6 lg:hidden"
         >
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-3.5 sm:gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link

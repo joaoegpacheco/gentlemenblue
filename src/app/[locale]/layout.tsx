@@ -45,8 +45,13 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={getHtmlLang(locale)} className={`${fontVariables} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-body">{children}</body>
+    <html
+      lang={getHtmlLang(locale)}
+      className={`${fontVariables} h-full overflow-x-clip bg-black antialiased`}
+    >
+      <body className="flex min-h-full flex-col overflow-x-clip bg-black font-body">
+        {children}
+      </body>
     </html>
   );
 }

@@ -50,9 +50,9 @@ const SPONSOR_LOGOS = [
 export function Sponsors({ dict }: SponsorsProps) {
   return (
     <section id="patrocinadores" className="overflow-hidden bg-black">
-      <div className="mx-auto w-full max-w-[1440px] px-3 py-10 sm:px-6 lg:px-10 lg:py-14">
+      <div className="w-full py-12 sm:py-14 lg:py-16">
         <h2
-          className={`${abrilFatface.className} text-center text-[clamp(1.5rem,4.5vw,3rem)] font-normal leading-tight tracking-wide`}
+          className={`${abrilFatface.className} px-5 text-center text-[clamp(1.5rem,4.5vw,3rem)] font-normal leading-tight tracking-wide sm:px-6 lg:px-10`}
         >
           <span className="text-[#0E7AEB]">{dict.heading.blue1}</span>
           <span className="text-[#B3B3B3]">{dict.heading.white1}</span>

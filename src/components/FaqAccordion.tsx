@@ -18,7 +18,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="mx-auto flex w-full max-w-[592px] flex-col gap-3">
+    <div className="mx-auto flex w-full max-w-[592px] flex-col gap-2.5 sm:gap-3">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
 
@@ -31,9 +31,9 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
               type="button"
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
-              className="flex w-full cursor-pointer items-center gap-4 p-6 text-left"
+              className="flex w-full cursor-pointer items-center gap-3 p-4 text-left sm:gap-4 sm:p-6"
             >
-              <span className="min-w-0 flex-1 text-xl font-medium leading-8 text-white">
+              <span className="min-w-0 flex-1 text-base font-medium leading-snug text-white sm:text-xl sm:leading-8">
                 {item.question}
               </span>
               <Image
@@ -42,13 +42,15 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
                 width={24}
                 height={24}
                 aria-hidden
-                className="h-6 w-6 shrink-0"
+                className="h-5 w-5 shrink-0 sm:h-6 sm:w-6"
               />
             </button>
 
             {isOpen ? (
-              <div className="px-6 pb-6">
-                <p className="text-base leading-6 text-white/60">{item.answer}</p>
+              <div className="px-4 pb-4 sm:px-6 sm:pb-6">
+                <p className="text-sm leading-6 text-white/60 sm:text-base">
+                  {item.answer}
+                </p>
               </div>
             ) : null}
           </div>

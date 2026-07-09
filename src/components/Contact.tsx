@@ -14,7 +14,7 @@ const WHATSAPP_NUMBER = "5541998142003";
 const FIELD_CLASS =
   "w-full border-0 border-b border-brand-blue bg-transparent pb-2 font-montserrat text-sm font-light text-white outline-none placeholder:text-white/40 focus:border-brand-blue";
 
-const TITLE_CLASS = `${blackHanSans.className} col-start-1 row-start-1 text-[40px] leading-none tracking-[0.05em] whitespace-nowrap`;
+const TITLE_CLASS = `${blackHanSans.className} col-start-1 row-start-1 text-[clamp(2rem,10vw,40px)] leading-none tracking-[0.05em] whitespace-nowrap`;
 
 function buildWhatsAppUrl(
   dict: Dictionary["contact"],
@@ -50,16 +50,16 @@ export function Contact({ dict }: ContactProps) {
   }
 
   return (
-    <section id="contato" className="bg-black">
+    <section id="contato" className="overflow-x-clip bg-black">
       <div
-        className={`${inter.className} mx-auto flex w-full max-w-[960px] flex-col items-center gap-12 px-4 py-12 sm:px-6 sm:py-14 lg:flex-row lg:items-start lg:justify-center lg:gap-16 lg:py-16`}
+        className={`${inter.className} mx-auto flex w-full max-w-[960px] flex-col items-center gap-10 px-5 py-12 sm:gap-12 sm:px-6 sm:py-14 lg:flex-row lg:items-start lg:justify-center lg:gap-16 lg:px-10 lg:py-16`}
       >
-        <div className="flex w-full max-w-84 flex-col items-center text-center sm:max-w-88 lg:flex-1">
-          <div className="w-max max-w-full overflow-visible">
-            <div className="grid place-items-center overflow-visible">
+        <div className="flex w-full max-w-sm flex-col items-center overflow-hidden text-center sm:max-w-88 lg:flex-1">
+          <div className="w-max max-w-full">
+            <div className="grid place-items-center">
               <p
                 aria-hidden
-                className={`${TITLE_CLASS} z-0 origin-bottom scale-[1.15] -translate-y-2 text-transparent [-webkit-text-stroke:2px_#0e7aeb] sm:-translate-y-2.5`}
+                className={`${TITLE_CLASS} z-0 origin-bottom scale-[1.08] -translate-y-1.5 text-transparent [-webkit-text-stroke:2px_#0e7aeb] sm:scale-[1.12] sm:-translate-y-2.5`}
               >
                 {dict.title}
               </p>
@@ -77,7 +77,7 @@ export function Contact({ dict }: ContactProps) {
         </div>
 
         <form
-          className="flex w-full max-w-84 flex-col gap-7 sm:max-w-88 lg:flex-1 lg:gap-8"
+          className="flex w-full max-w-sm flex-col gap-6 sm:max-w-88 sm:gap-7 lg:flex-1 lg:gap-8"
           onSubmit={handleSubmit}
         >
           <div>

@@ -36,8 +36,8 @@ const SOCIAL_LINKS = [
 
 export function Footer({ dict }: FooterProps) {
   return (
-    <footer className="bg-black">
-      <div className="@container relative w-full">
+    <footer className="overflow-x-clip bg-black">
+      <div className="@container relative w-full overflow-hidden">
         <Image
           src={assets.images.footerBanner}
           alt=""
@@ -50,7 +50,7 @@ export function Footer({ dict }: FooterProps) {
           aria-hidden
         />
 
-        <div className="absolute inset-0 flex mt-16">
+        <div className="absolute inset-0 mt-8 flex sm:mt-12 md:mt-16">
           <div
             className={`${abrilFatface.className} flex w-[58%] flex-col items-center px-[2cqw] text-center`}
           >
@@ -87,20 +87,20 @@ export function Footer({ dict }: FooterProps) {
       </div>
 
       <div
-        className={`${inter.className} mx-auto w-full max-w-[1440px] px-4 py-8 sm:px-6 lg:px-10 lg:py-10`}
+        className={`${inter.className} mx-auto w-full max-w-[1440px] px-5 py-10 sm:px-6 sm:py-10 lg:px-10 lg:py-12`}
       >
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_auto_1fr] lg:gap-6">
-          <div className="flex justify-center overflow-visible lg:justify-start">
+          <div className="flex justify-center overflow-hidden lg:justify-start">
             <AnimatedLogo
               alt={dict.logoAlt}
               width={204}
               height={294}
-              className="w-24 sm:w-28 lg:w-32"
+              className="w-20 sm:w-28 lg:w-32"
               flameVariant="footer"
             />
           </div>
 
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-3.5 sm:gap-4">
             <p className="text-sm text-brand-gray sm:text-base">
               {dict.followUs}
             </p>
@@ -142,7 +142,7 @@ export function Footer({ dict }: FooterProps) {
                 alt={dict.weareonAlt}
                 width={298}
                 height={172}
-                className="h-auto w-28 sm:w-32"
+                className="h-auto w-24 sm:w-32"
               />
             </Link>
             <Link
@@ -156,7 +156,7 @@ export function Footer({ dict }: FooterProps) {
                 alt={dict.j2pAlt}
                 width={321}
                 height={162}
-                className="h-auto w-16 sm:w-20"
+                className="h-auto w-14 sm:w-20"
               />
             </Link>
           </div>

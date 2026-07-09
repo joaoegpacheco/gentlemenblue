@@ -51,24 +51,24 @@ function AttractionCard({
       </div>
 
       <div
-        className={`${inter.className} relative z-10 flex flex-1 flex-col items-center px-2 pb-3 pt-[76%] text-center sm:px-3 sm:pb-4 lg:pt-[78%]`}
+        className={`${inter.className} relative z-10 flex flex-1 flex-col items-center px-1.5 pb-2.5 pt-[76%] text-center sm:px-3 sm:pb-4 lg:pt-[78%]`}
       >
-        <h3 className="font-bebas text-[clamp(0.75rem,2.2vw,1rem)] leading-tight tracking-[0.06em]">
+        <h3 className="font-bebas text-[clamp(0.7rem,3.2vw,1rem)] leading-tight tracking-[0.06em]">
           <span className="block text-[#B3B3B3]">{item.titleLine1}</span>
           <span className="block text-[#0E7AEB]">{item.titleLine2}</span>
         </h3>
 
-        <p className="mt-2 max-w-[14rem] text-[9px] leading-snug text-white/90 sm:text-[10px] lg:text-[11px]">
+        <p className="mt-1.5 max-w-[14rem] text-[8px] leading-snug text-white/90 sm:mt-2 sm:text-[10px] lg:text-[11px]">
           {item.description}
         </p>
 
-        <div className="mt-auto flex w-full justify-center pt-3 sm:pt-4">
+        <div className="mt-auto flex w-full justify-center pt-2 sm:pt-4">
           <Image
             src={iconSrc}
             alt={item.iconAlt}
             width={260}
             height={310}
-            className="h-[4.5rem] w-auto object-contain sm:h-20 lg:h-[5.5rem]"
+            className="h-14 w-auto object-contain sm:h-20 lg:h-[5.5rem]"
           />
         </div>
       </div>
@@ -78,20 +78,20 @@ function AttractionCard({
 
 export function Attractions({ dict }: AttractionsProps) {
   return (
-    <section id="atracoes" className="bg-black">
-      <div className="mx-auto w-full max-w-[1440px] px-3 py-6 lg:px-5 lg:py-8">
+    <section id="atracoes" className="overflow-x-clip bg-black">
+      <div className="mx-auto w-full max-w-[1440px] px-5 py-12 sm:px-6 sm:py-14 lg:px-10 lg:py-16">
         <header className="text-center">
-          <div className="flex items-center justify-center gap-4 sm:gap-6">
+          <div className="flex items-center justify-center gap-3 sm:gap-6">
             <Image
               src={assets.icons.star}
               alt=""
               width={126}
               height={126}
               aria-hidden
-              className="h-10 w-10 shrink-0 sm:h-12 sm:w-12 lg:h-14 lg:w-14"
+              className="h-8 w-8 shrink-0 sm:h-12 sm:w-12 lg:h-14 lg:w-14"
             />
             <h2
-              className={`${abrilFatface.className} text-[clamp(2rem,5vw,3.5rem)] font-normal tracking-wide text-[#B3B3B3]`}
+              className={`${abrilFatface.className} text-[clamp(1.75rem,7vw,3.5rem)] font-normal tracking-wide text-[#B3B3B3]`}
             >
               {dict.title}
             </h2>
@@ -101,17 +101,17 @@ export function Attractions({ dict }: AttractionsProps) {
               width={126}
               height={126}
               aria-hidden
-              className="h-10 w-10 shrink-0 sm:h-12 sm:w-12 lg:h-14 lg:w-14"
+              className="h-8 w-8 shrink-0 sm:h-12 sm:w-12 lg:h-14 lg:w-14"
             />
           </div>
           <p
-            className={`${inter.className} mt-4 text-xs font-semibold uppercase tracking-[0.12em] text-[#B3B3B3] sm:mt-5 sm:text-sm lg:text-base`}
+            className={`${inter.className} mt-3 text-xs font-semibold uppercase tracking-[0.12em] text-[#B3B3B3] sm:mt-5 sm:text-sm lg:text-base`}
           >
             {dict.subtitle}
           </p>
         </header>
 
-        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:mt-12 lg:grid-cols-6 lg:gap-3">
+        <div className="mt-8 grid grid-cols-2 gap-2.5 sm:mt-10 sm:gap-4 md:grid-cols-3 lg:mt-12 lg:grid-cols-6 lg:gap-3">
           {dict.items.map((item) => {
             const icon = item.icon as AttractionIcon;
 
