@@ -8,7 +8,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Attractions } from "@/components/Attractions";
 import { Structure } from "@/components/Structure";
@@ -19,8 +19,8 @@ type AttractionsStructureScrollProps = {
   structureDict: Dictionary["structure"];
 };
 
-/** Quanto Structure sobrepõe Attractions ao final da animação. */
-const STRUCTURE_OVERLAP_VH = 40;
+const OVERLAP_MOBILE_VH = 12;
+const OVERLAP_DESKTOP_VH = 40;
 
 export function AttractionsStructureScroll({
   attractionsDict,
@@ -28,6 +28,18 @@ export function AttractionsStructureScroll({
 }: AttractionsStructureScrollProps) {
   const structureRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
+  const [overlapVh, setOverlapVh] = useState(OVERLAP_MOBILE_VH);
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 1024px)");
+    const sync = () => {
+      setOverlapVh(media.matches ? OVERLAP_DESKTOP_VH : OVERLAP_MOBILE_VH);
+    };
+
+    sync();
+    media.addEventListener("change", sync);
+    return () => media.removeEventListener("change", sync);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: structureRef,
@@ -37,7 +49,7 @@ export function AttractionsStructureScroll({
   const y = useTransform(
     scrollYProgress,
     [0, 0.45, 1],
-    [`${STRUCTURE_OVERLAP_VH}vh`, `${STRUCTURE_OVERLAP_VH}vh`, "0vh"],
+    [`${overlapVh}vh`, `${overlapVh}vh`, "0vh"],
   );
 
   return (
@@ -52,7 +64,7 @@ export function AttractionsStructureScroll({
           style={
             prefersReducedMotion
               ? undefined
-              : { y, marginTop: `-${STRUCTURE_OVERLAP_VH}vh` }
+              : { y, marginTop: `-${overlapVh}vh` }
           }
           className="relative z-10 shadow-[0_-32px_64px_rgba(0,0,0,0.55)]"
         >
