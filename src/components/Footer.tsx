@@ -156,6 +156,7 @@ export function Footer({ dict }: FooterProps) {
                 alt={dict.j2pAlt}
                 width={321}
                 height={162}
+                unoptimized
                 className="h-auto w-14 sm:w-20"
               />
             </Link>
