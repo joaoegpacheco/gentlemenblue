@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
+import { SYMPLA_EVENT_URL } from "@/lib/links";
 
 type HeaderProps = {
   dict: Dictionary["header"];
@@ -32,7 +33,7 @@ export function Header({ dict }: HeaderProps) {
 
   return (
     <header className="relative z-20 w-full">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-end gap-3 px-5 py-3 sm:gap-4 sm:px-6 lg:justify-between lg:px-10 lg:py-4 2xl:max-w-[1800px] 2xl:px-14 2xl:py-5 min-[2560px]:max-w-[2400px] min-[2560px]:px-16 min-[2560px]:py-6 min-[3840px]:max-w-[3000px] min-[3840px]:px-20 min-[3840px]:py-8">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-end gap-[clamp(0.75rem,1.2vw,1.5rem)] px-[clamp(1.25rem,2.5vw,5rem)] py-[clamp(0.5rem,1.2vh,2rem)] lg:justify-between 2xl:max-w-[1800px] min-[2560px]:max-w-[2400px] min-[3840px]:max-w-[3000px] [@media(max-height:640px)]:py-1.5">
         <button
           type="button"
           aria-expanded={menuOpen}
@@ -54,13 +55,13 @@ export function Header({ dict }: HeaderProps) {
 
         <nav
           aria-label={dict.mainNav}
-          className="hidden flex-1 items-center justify-center gap-x-4 xl:gap-x-6 lg:flex 2xl:gap-x-7 min-[2560px]:gap-x-9 min-[3840px]:gap-x-11"
+          className="hidden flex-1 items-center justify-center gap-x-[clamp(1rem,1.6vw,2.75rem)] lg:flex"
         >
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`font-bebas text-xs tracking-[0.12em] transition-colors hover:text-brand-blue xl:text-sm 2xl:text-base min-[2560px]:text-xl min-[3840px]:text-2xl ${
+              className={`font-bebas text-[clamp(0.95rem,0.95vw+0.45vh,2.75rem)] tracking-[0.12em] transition-colors hover:text-brand-blue ${
                 link.active ? "text-brand-blue" : "text-brand-gray"
               }`}
             >
@@ -70,15 +71,19 @@ export function Header({ dict }: HeaderProps) {
         </nav>
 
         <Link
-          href="#contato"
-          className="hidden shrink-0 items-center justify-center rounded-full bg-brand-blue px-6 py-2.5 font-bebas text-xs tracking-[0.12em] text-white transition-opacity hover:opacity-90 xl:px-7 xl:text-sm lg:inline-flex 2xl:px-9 2xl:py-3 2xl:text-base min-[2560px]:px-11 min-[2560px]:py-3.5 min-[2560px]:text-xl min-[3840px]:px-14 min-[3840px]:py-4 min-[3840px]:text-2xl"
+          href={SYMPLA_EVENT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden shrink-0 items-center justify-center rounded-full bg-brand-blue px-[clamp(1.5rem,2vw,3.5rem)] py-[clamp(0.6rem,0.9vh+0.2vw,1.25rem)] font-bebas text-[clamp(0.75rem,0.65vw+0.35vh,2rem)] tracking-[0.12em] text-white transition-opacity hover:opacity-90 lg:inline-flex"
         >
           {dict.wantToParticipate}
         </Link>
 
         <Link
-          href="#contato"
-          className="inline-flex shrink-0 items-center justify-center rounded-full bg-brand-blue px-4 py-2 font-bebas text-xs tracking-[0.12em] text-white transition-opacity hover:opacity-90 lg:hidden"
+          href={SYMPLA_EVENT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex shrink-0 items-center justify-center rounded-full bg-brand-blue px-[clamp(1rem,3vw,1.5rem)] py-[clamp(0.5rem,1.2vw,0.75rem)] font-bebas text-[clamp(0.75rem,2.2vw,0.875rem)] tracking-[0.12em] text-white transition-opacity hover:opacity-90 lg:hidden"
         >
           {dict.participate}
         </Link>
@@ -88,14 +93,14 @@ export function Header({ dict }: HeaderProps) {
         <nav
           id="mobile-nav"
           aria-label={dict.mobileNav}
-          className="border-t border-brand-gray/20 bg-black/90 px-5 py-5 backdrop-blur-sm sm:px-6 sm:py-6 lg:hidden"
+          className="border-t border-brand-gray/20 bg-black/90 px-[clamp(1.25rem,4vw,1.5rem)] py-[clamp(1.25rem,3vw,1.5rem)] backdrop-blur-sm lg:hidden"
         >
-          <ul className="flex flex-col gap-3.5 sm:gap-4">
+          <ul className="flex flex-col gap-[clamp(0.85rem,2.5vw,1.25rem)]">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`font-bebas text-lg tracking-[0.12em] transition-colors hover:text-brand-blue ${
+                  className={`font-bebas text-[clamp(1.35rem,4.5vw,1.75rem)] tracking-[0.12em] transition-colors hover:text-brand-blue ${
                     link.active ? "text-brand-blue" : "text-brand-gray"
                   }`}
                   onClick={() => setMenuOpen(false)}

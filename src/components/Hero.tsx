@@ -5,6 +5,7 @@ import type { Dictionary } from "@/i18n/get-dictionary";
 import { assets } from "@/lib/assets";
 import { getCountdownSnapshot } from "@/lib/countdown";
 import { inter } from "@/lib/fonts";
+import { SYMPLA_EVENT_URL } from "@/lib/links";
 
 import { AnimatedLogo } from "./AnimatedLogo";
 import { Countdown } from "./Countdown";
@@ -33,60 +34,60 @@ export function Hero({ dict }: HeroProps) {
       <div className="relative z-10 flex h-full min-h-0 flex-col">
         <Header dict={dict.header} />
 
-        <div className="mx-auto flex w-full max-w-[1440px] flex-1 flex-col px-5 pb-4 pt-0 min-h-0 sm:px-6 sm:pb-5 lg:px-10 lg:pb-6 2xl:max-w-[1800px] 2xl:px-14 2xl:pb-8 min-[2560px]:max-w-[2400px] min-[2560px]:px-16 min-[2560px]:pb-10 min-[3840px]:max-w-[3000px] min-[3840px]:px-20 min-[3840px]:pb-12">
-          <div className="flex min-h-0 flex-1 flex-col justify-between gap-4 sm:gap-5 lg:max-w-[540px] lg:gap-6 2xl:max-w-[1024px] 2xl:justify-around 2xl:gap-8 min-[2560px]:max-w-[980px] min-[2560px]:gap-10 min-[3840px]:max-w-[1200px] min-[3840px]:gap-12">
-            <div className="flex flex-col gap-2.5 sm:gap-3.5 lg:gap-4 2xl:gap-5 min-[2560px]:gap-6">
+        <div className="mx-auto flex w-full min-h-0 max-w-[1440px] flex-1 flex-col justify-between px-[clamp(1.25rem,2.5vw,5rem)] pb-[clamp(1rem,2.5vh,3.5rem)] pt-0 lg:justify-center 2xl:max-w-[1800px] min-[2560px]:max-w-[2400px] min-[3840px]:max-w-[3000px]">
+          <div className="flex min-h-0 w-full max-w-full flex-1 flex-col justify-between gap-[clamp(0.65rem,2.8vh,2.75rem)] lg:flex-none lg:justify-start lg:max-w-max [@media(max-height:640px)]:gap-1.5">
+            <div className="flex min-h-0 flex-col gap-[clamp(0.65rem,2.8vh,2.75rem)] [@media(max-height:640px)]:gap-1.5">
               <AnimatedLogo
                 alt={dict.hero.logoAlt}
                 width={204}
                 height={294}
                 priority
-                className="w-14 sm:w-20 lg:w-[5.5rem] 2xl:w-32 min-[2560px]:w-40 min-[3840px]:w-52"
+                className="w-[clamp(3.5rem,5.5vw+4vh,18rem)] shrink-0 [@media(max-height:640px)]:w-[clamp(2.5rem,4vh,4.5rem)]"
               />
 
-              <h1 className="leading-[0.85] tracking-wide">
-                <span className="font-title block text-[clamp(1.85rem,8vw,3.75rem)] text-white 2xl:text-[5.5rem] min-[2560px]:text-[7.5rem] min-[3840px]:text-[10rem]">
+              <h1 className="shrink-0 leading-[0.85] tracking-wide">
+                <span className="font-title block text-[clamp(1.85rem,3vw+2.4vh,13rem)] text-white [@media(max-height:640px)]:text-[clamp(1.35rem,5vh,2.5rem)]">
                   GENTLEMEN
                 </span>
-                <span className="font-title-vintage -mt-1 block text-[clamp(2.5rem,14vw,7.5rem)] text-brand-blue lg:-mt-2 2xl:-mt-3 2xl:text-[11rem] min-[2560px]:-mt-4 min-[2560px]:text-[15rem] min-[3840px]:-mt-5 min-[3840px]:text-[20rem]">
+                <span className="font-title-vintage -mt-[0.04em] block text-[clamp(2.5rem,7vw+4vh,26rem)] text-brand-blue [@media(max-height:640px)]:text-[clamp(1.9rem,8vh,3.75rem)]">
                   BLUE
                 </span>
               </h1>
 
-              <div className="flex items-center gap-2.5 sm:gap-4 2xl:gap-5">
+              <div className="flex shrink-0 items-center gap-[clamp(0.6rem,1.4vw,1.5rem)]">
                 <span
                   aria-hidden
-                  className="h-px w-8 shrink-0 bg-brand-blue sm:w-14 2xl:w-16 min-[2560px]:w-20"
+                  className="h-px w-[clamp(1.75rem,3.5vw,6rem)] shrink-0 bg-brand-blue"
                 />
-                <p className="font-bebas text-xs tracking-[0.12em] text-white sm:text-sm 2xl:text-2xl min-[2560px]:text-3xl min-[3840px]:text-4xl">
+                <p className="font-bebas text-[clamp(0.85rem,0.75vw+0.75vh,3rem)] tracking-[0.12em] text-white">
                   {dict.hero.tagline}
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 items-end gap-2 sm:gap-4 2xl:gap-5 min-[2560px]:gap-6">
-                <div className="flex min-w-0 flex-col gap-0.5 sm:gap-1">
+              <div className="grid shrink-0 grid-cols-3 items-end gap-2 sm:gap-[clamp(0.5rem,1.5vw,2rem)] lg:grid-cols-[auto_auto_auto] lg:w-max lg:max-w-full lg:gap-[clamp(1.25rem,2.5vw,3.5rem)]">
+                <div className="flex min-w-0 flex-col gap-0.5 overflow-hidden sm:gap-1 lg:min-w-max lg:overflow-visible">
                   <p
-                    className={`${inter.className} text-xs font-bold leading-tight tracking-[0.04em] text-white sm:text-sm 2xl:text-2xl min-[2560px]:text-3xl min-[3840px]:text-4xl`}
+                    className={`${inter.className} text-[0.7rem] font-bold leading-tight tracking-[0.02em] text-white break-words sm:text-[clamp(0.85rem,0.75vw+0.75vh,3rem)] sm:tracking-[0.04em] lg:whitespace-nowrap lg:break-normal`}
                   >
                     {date.primary}
                   </p>
-                  <p className="font-montserrat text-[9px] leading-tight tracking-[0.06em] text-brand-gray uppercase sm:text-xs lg:text-sm 2xl:text-lg min-[2560px]:text-xl min-[3840px]:text-2xl">
+                  <p className="font-montserrat text-[0.55rem] leading-tight tracking-[0.04em] text-brand-gray uppercase break-words sm:text-[clamp(0.65rem,0.5vw+0.45vh,1.75rem)] sm:tracking-[0.06em] lg:whitespace-nowrap lg:break-normal">
                     {date.secondary}
                   </p>
                 </div>
 
-                <div className="flex min-w-0 flex-col gap-0.5 sm:gap-1">
+                <div className="flex min-w-0 flex-col gap-0.5 overflow-hidden sm:gap-1 lg:min-w-max lg:overflow-visible">
                   <p
-                    className={`${inter.className} text-xs font-bold leading-tight tracking-[0.04em] text-white sm:text-base lg:text-lg 2xl:text-2xl min-[2560px]:text-3xl min-[3840px]:text-4xl`}
+                    className={`${inter.className} text-[0.7rem] font-bold leading-tight tracking-[0.02em] text-white break-words sm:text-[clamp(0.85rem,0.8vw+0.75vh,3rem)] sm:tracking-[0.04em] lg:whitespace-nowrap lg:break-normal`}
                   >
                     {time.primary}
                   </p>
-                  <p className="font-montserrat text-[9px] leading-tight tracking-[0.06em] text-brand-gray uppercase sm:text-xs lg:text-sm 2xl:text-lg min-[2560px]:text-xl min-[3840px]:text-2xl">
+                  <p className="font-montserrat text-[0.55rem] leading-tight tracking-[0.04em] text-brand-gray uppercase break-words sm:text-[clamp(0.65rem,0.5vw+0.45vh,1.75rem)] sm:tracking-[0.06em] lg:whitespace-nowrap lg:break-normal">
                     {time.secondary}
                   </p>
                 </div>
 
-                <div className="flex min-w-0 flex-col gap-1 sm:gap-1.5">
+                <div className="flex min-w-0 flex-col gap-1 overflow-hidden sm:gap-1.5 lg:min-w-max lg:overflow-visible">
                   <Image
                     src={assets.images.armazemGaragem}
                     alt={location.primary}
@@ -94,24 +95,26 @@ export function Hero({ dict }: HeroProps) {
                     height={107}
                     priority
                     unoptimized
-                    className="h-auto w-auto max-h-[3rem] max-w-[5.5rem] object-contain object-left sm:max-h-[4rem] sm:max-w-[7rem] 2xl:max-h-[5.5rem] 2xl:max-w-[10rem] min-[2560px]:max-h-[7rem] min-[2560px]:max-w-[12rem] min-[3840px]:max-h-[9rem] min-[3840px]:max-w-[15rem]"
+                    className="h-auto w-auto max-h-8 max-w-[4.5rem] object-contain object-left sm:max-h-[clamp(2.75rem,5.5vh+1.5vw,12rem)] sm:max-w-[clamp(5rem,10vw+2.5vh,18rem)] [@media(max-height:640px)]:max-h-[2.25rem] [@media(max-height:640px)]:max-w-[5rem]"
                   />
-                  <p className="font-montserrat text-[9px] leading-tight tracking-[0.06em] text-brand-gray uppercase sm:text-xs lg:text-sm 2xl:text-lg min-[2560px]:text-xl min-[3840px]:text-2xl">
+                  <p className="font-montserrat text-[0.55rem] leading-tight tracking-[0.04em] text-brand-gray uppercase break-words sm:text-[clamp(0.65rem,0.5vw+0.45vh,1.75rem)] sm:tracking-[0.06em] lg:whitespace-nowrap lg:break-normal">
                     {location.secondary}
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:gap-4 2xl:gap-5">
+              <div className="flex shrink-0 flex-col gap-2.5 sm:flex-row sm:items-center sm:gap-[clamp(0.85rem,1.4vw,1.5rem)] [@media(max-height:640px)]:gap-1.5">
                 <Link
-                  href="#contato"
-                  className="inline-flex items-center justify-center rounded-full bg-brand-blue px-6 py-2.5 font-bebas text-xs tracking-[0.12em] text-white transition-opacity hover:opacity-90 sm:px-8 sm:py-3 sm:text-sm lg:text-base 2xl:px-11 2xl:py-4 2xl:text-xl min-[2560px]:px-14 min-[2560px]:py-5 min-[2560px]:text-2xl min-[3840px]:px-16 min-[3840px]:py-6 min-[3840px]:text-3xl"
+                  href={SYMPLA_EVENT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-brand-blue px-[clamp(1.5rem,2.4vw,4.5rem)] py-[clamp(0.65rem,1.1vh+0.25vw,1.75rem)] font-bebas text-[clamp(0.85rem,0.7vw+0.55vh,2.25rem)] tracking-[0.12em] text-white transition-opacity hover:opacity-90"
                 >
                   {dict.hero.wantToParticipate}
                 </Link>
                 <Link
                   href="#contato"
-                  className="inline-flex items-center justify-center rounded-full border border-white/70 px-6 py-2.5 font-bebas text-xs tracking-[0.12em] text-white transition-colors hover:bg-white/10 sm:px-8 sm:py-3 sm:text-sm lg:text-base 2xl:px-11 2xl:py-4 2xl:text-xl min-[2560px]:px-14 min-[2560px]:py-5 min-[2560px]:text-2xl min-[3840px]:px-16 min-[3840px]:py-6 min-[3840px]:text-3xl"
+                  className="inline-flex items-center justify-center rounded-full border border-white/70 px-[clamp(1.5rem,2.4vw,4.5rem)] py-[clamp(0.65rem,1.1vh+0.25vw,1.75rem)] font-bebas text-[clamp(0.85rem,0.7vw+0.55vh,2.25rem)] tracking-[0.12em] text-white transition-colors hover:bg-white/10"
                 >
                   {dict.hero.becomeSponsor}
                 </Link>
