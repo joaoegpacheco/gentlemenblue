@@ -38,7 +38,7 @@ function AttractionCard({
   photoSrc: (typeof PHOTOS)[AttractionIcon];
 }) {
   return (
-    <article className="attraction-neon-border relative flex aspect-[568/1024] flex-col rounded-sm bg-black">
+    <article className="attraction-neon-border relative flex h-full min-h-0 aspect-[568/1024] flex-col overflow-hidden rounded-sm bg-black">
       <div className="absolute inset-0 overflow-hidden rounded-[inherit]">
         <Image
           src={photoSrc}
@@ -51,18 +51,18 @@ function AttractionCard({
       </div>
 
       <div
-        className={`${inter.className} relative z-10 flex flex-1 flex-col items-center px-1.5 pb-2.5 pt-[76%] text-center sm:px-3 sm:pb-4 lg:pt-[78%]`}
+        className={`${inter.className} relative z-10 flex min-h-0 flex-1 flex-col items-center px-1.5 pb-2.5 pt-[76%] text-center sm:px-3 sm:pb-4 lg:pt-[78%]`}
       >
-        <h3 className="font-bebas text-[clamp(0.7rem,3.2vw,1rem)] leading-tight tracking-[0.06em]">
+        <h3 className="shrink-0 font-bebas text-[clamp(0.7rem,3.2vw,1rem)] leading-tight tracking-[0.06em]">
           <span className="block text-[#B3B3B3]">{item.titleLine1}</span>
           <span className="block text-[#0E7AEB]">{item.titleLine2}</span>
         </h3>
 
-        <p className="mt-1.5 max-w-[14rem] text-[8px] leading-snug text-white/90 sm:mt-2 sm:text-[10px] lg:text-[11px]">
+        <p className="mt-1.5 line-clamp-4 max-w-[14rem] flex-1 text-[8px] leading-snug text-white/90 sm:mt-2 sm:line-clamp-5 sm:text-[10px] lg:text-[11px]">
           {item.description}
         </p>
 
-        <div className="mt-auto flex w-full justify-center pt-2 sm:pt-4">
+        <div className="mt-auto flex w-full shrink-0 justify-center pt-2 sm:pt-4">
           <Image
             src={iconSrc}
             alt={item.iconAlt}
@@ -79,7 +79,7 @@ function AttractionCard({
 export function Attractions({ dict }: AttractionsProps) {
   return (
     <section id="atracoes" className="overflow-x-clip bg-black">
-      <div className="mx-auto w-full max-w-[1440px] px-5 py-12 sm:px-6 sm:py-14 lg:px-10 lg:py-16">
+      <div className="mx-auto w-full max-w-[1440px] px-5 pb-24 pt-12 sm:px-6 sm:pb-28 sm:pt-14 lg:px-10 lg:pb-36 lg:pt-16">
         <header className="text-center">
           <div className="flex items-center justify-center gap-3 sm:gap-6">
             <Image
@@ -111,7 +111,7 @@ export function Attractions({ dict }: AttractionsProps) {
           </p>
         </header>
 
-        <div className="mt-8 grid grid-cols-2 gap-2.5 sm:mt-10 sm:gap-4 md:grid-cols-3 lg:mt-12 lg:grid-cols-6 lg:gap-3">
+        <div className="mt-8 grid grid-cols-2 items-stretch gap-2.5 sm:mt-10 sm:gap-4 md:grid-cols-3 lg:mt-12 lg:grid-cols-6 lg:gap-3">
           {dict.items.map((item) => {
             const icon = item.icon as AttractionIcon;
 
