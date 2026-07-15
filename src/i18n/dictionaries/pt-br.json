@@ -187,7 +187,10 @@
     "subtitle": "CONFIRA AS FOTOS DAS EDIÇÕES ANTERIORES",
     "imageAlt": "Momento do Gentlemen Blue",
     "viewFullGallery": "VER GALERIA COMPLETA",
-    "viewFullGalleryHref": "#galeria"
+    "viewFullGalleryHref": "#galeria",
+    "previous": "Foto anterior",
+    "next": "Próxima foto",
+    "close": "Fechar"
   },
   "store": {
     "heading": {

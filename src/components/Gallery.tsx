@@ -7,7 +7,7 @@ type GalleryProps = {
   dict: Dictionary["gallery"];
 };
 
-const SLIDE_COUNT = 38;
+const SLIDE_COUNT = 52;
 
 export function Gallery({ dict }: GalleryProps) {
   return (
@@ -28,7 +28,13 @@ export function Gallery({ dict }: GalleryProps) {
         </header>
 
         <div className="relative mt-8 w-full sm:mt-10 lg:mt-12">
-          <GalleryCarousel imageAlt={dict.imageAlt} slideCount={SLIDE_COUNT} />
+          <GalleryCarousel
+            imageAlt={dict.imageAlt}
+            slideCount={SLIDE_COUNT}
+            previousLabel={dict.previous}
+            nextLabel={dict.next}
+            closeLabel={dict.close}
+          />
         </div>
       </div>
     </section>

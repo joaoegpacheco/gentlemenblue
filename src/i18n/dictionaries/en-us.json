@@ -187,7 +187,10 @@
     "subtitle": "CHECK OUT PHOTOS FROM PREVIOUS EDITIONS",
     "imageAlt": "Gentlemen Blue moment",
     "viewFullGallery": "VIEW FULL GALLERY",
-    "viewFullGalleryHref": "#galeria"
+    "viewFullGalleryHref": "#galeria",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "close": "Close"
   },
   "store": {
     "heading": {
