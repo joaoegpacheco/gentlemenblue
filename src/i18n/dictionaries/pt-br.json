@@ -186,11 +186,11 @@
     },
     "subtitle": "CONFIRA AS FOTOS DAS EDIÇÕES ANTERIORES",
     "imageAlt": "Momento do Gentlemen Blue",
-    "viewFullGallery": "VER GALERIA COMPLETA",
-    "viewFullGalleryHref": "#galeria",
     "previous": "Foto anterior",
     "next": "Próxima foto",
-    "close": "Fechar"
+    "close": "Fechar",
+    "viewFullGallery": "VER GALERIA COMPLETA",
+    "viewFullGalleryHref": "#galeria"
   },
   "store": {
     "heading": {
@@ -231,7 +231,7 @@
       },
       {
         "question": "Como posso ser um patrocinador?",
-        "answer": "Entre em contato pela seção Fale Conosco ou pelos canais oficiais para receber a proposta de patrocínio e parceria."
+        "answer": "Entre em contato pela seção Quero Ser Patrocinador ou pelos canais oficiais para receber a proposta de patrocínio e parceria."
       },
       {
         "question": "Preciso comprar ingresso?",
@@ -244,7 +244,8 @@
     ]
   },
   "contact": {
-    "title": "FALE CONOSCO",
+    "titleLine1": "QUERO SER",
+    "titleLine2": "PATROCINADOR",
     "whatsappIntro": "Olá! Vim pelo site Gentlemen Blue.",
     "noteLines": [
       "TALVEZ AQUI INCLUIR UM CAMPO",

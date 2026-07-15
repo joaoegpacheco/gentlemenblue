@@ -186,11 +186,11 @@
     },
     "subtitle": "CHECK OUT PHOTOS FROM PREVIOUS EDITIONS",
     "imageAlt": "Gentlemen Blue moment",
-    "viewFullGallery": "VIEW FULL GALLERY",
-    "viewFullGalleryHref": "#galeria",
     "previous": "Previous photo",
     "next": "Next photo",
-    "close": "Close"
+    "close": "Close",
+    "viewFullGallery": "VIEW FULL GALLERY",
+    "viewFullGalleryHref": "#galeria"
   },
   "store": {
     "heading": {
@@ -231,7 +231,7 @@
       },
       {
         "question": "HOW CAN I BECOME A SPONSOR?",
-        "answer": "Reach out through the Contact section or official channels to receive sponsorship and partnership information."
+        "answer": "Reach out through the I Want to Be a Sponsor section or official channels to receive sponsorship and partnership information."
       },
       {
         "question": "Do I need to buy a ticket?",
@@ -244,7 +244,8 @@
     ]
   },
   "contact": {
-    "title": "CONTACT US",
+    "titleLine1": "I WANT TO BE",
+    "titleLine2": "A SPONSOR",
     "whatsappIntro": "Hello! I came from the Gentlemen Blue website.",
     "noteLines": [
       "PERHAPS INCLUDE A FIELD HERE",
