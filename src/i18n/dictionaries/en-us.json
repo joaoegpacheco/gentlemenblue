@@ -246,7 +246,6 @@
   "contact": {
     "titleLine1": "I WANT TO BE",
     "titleLine2": "A SPONSOR",
-    "whatsappIntro": "Hello! I came from the Gentlemen Blue website.",
     "noteLines": [
       "PERHAPS INCLUDE A FIELD HERE",
       "FOR SPONSORS.",
@@ -259,7 +258,10 @@
       "phone": "phone",
       "message": "message"
     },
-    "submit": "SEND"
+    "submit": "SEND",
+    "sending": "SENDING...",
+    "success": "Message sent successfully!",
+    "error": "Could not send. Please try again."
   },
   "footer": {
     "saveTheDate": {

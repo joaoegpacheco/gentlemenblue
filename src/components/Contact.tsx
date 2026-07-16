@@ -1,6 +1,6 @@
 "use client";
 
-import type { FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { blackHanSans, inter } from "@/lib/fonts";
@@ -9,44 +9,47 @@ type ContactProps = {
   dict: Dictionary["contact"];
 };
 
-const WHATSAPP_NUMBER = "5541998142003";
+type SubmitStatus = "idle" | "sending" | "success" | "error";
 
 const FIELD_CLASS =
   "w-full border-0 border-b border-brand-blue bg-transparent pb-2 font-montserrat text-sm font-light text-white outline-none placeholder:text-white/40 focus:border-brand-blue";
 
 const TITLE_CLASS = `${blackHanSans.className} col-start-1 row-start-1 text-center text-[clamp(2rem,10vw,40px)] leading-none tracking-[0.05em]`;
 
-function buildWhatsAppUrl(
-  dict: Dictionary["contact"],
-  data: { name: string; email: string; phone: string; message: string },
-) {
-  const text = [
-    dict.whatsappIntro,
-    "",
-    `${dict.fields.name}: ${data.name}`,
-    `${dict.fields.email}: ${data.email}`,
-    `${dict.fields.phone}: ${data.phone}`,
-    "",
-    `${dict.fields.message}:`,
-    data.message,
-  ].join("\n");
-
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
-}
-
 export function Contact({ dict }: ContactProps) {
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  const [status, setStatus] = useState<SubmitStatus>("idle");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
-    const url = buildWhatsAppUrl(dict, {
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
       name: formData.get("name")?.toString().trim() ?? "",
       email: formData.get("email")?.toString().trim() ?? "",
       phone: formData.get("phone")?.toString().trim() ?? "",
       message: formData.get("message")?.toString().trim() ?? "",
-    });
+    };
 
-    window.open(url, "_blank", "noopener,noreferrer");
+    setStatus("sending");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        setStatus("error");
+        return;
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -70,12 +73,6 @@ export function Contact({ dict }: ContactProps) {
               </h2>
             </div>
           </div>
-
-          {/* <div className="mt-10 space-y-0.5 font-montserrat text-[clamp(0.625rem,1.5vw,0.75rem)] font-light uppercase leading-relaxed tracking-[0.05em] text-white sm:mt-12">
-            {dict.noteLines.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
-          </div> */}
         </div>
 
         <form
@@ -93,6 +90,7 @@ export function Contact({ dict }: ContactProps) {
               id="contact-name"
               name="name"
               type="text"
+              required
               autoComplete="name"
               className={`${FIELD_CLASS} mt-2`}
             />
@@ -109,6 +107,7 @@ export function Contact({ dict }: ContactProps) {
               id="contact-email"
               name="email"
               type="email"
+              required
               autoComplete="email"
               className={`${FIELD_CLASS} mt-2`}
             />
@@ -125,6 +124,7 @@ export function Contact({ dict }: ContactProps) {
               id="contact-phone"
               name="phone"
               type="tel"
+              required
               autoComplete="tel"
               className={`${FIELD_CLASS} mt-2`}
             />
@@ -141,17 +141,31 @@ export function Contact({ dict }: ContactProps) {
               id="contact-message"
               name="message"
               rows={5}
+              required
               className={`${FIELD_CLASS} mt-2 resize-none`}
             />
           </div>
 
-          <div className="flex justify-end pt-1">
+          <div className="flex flex-col items-end gap-3 pt-1">
             <button
               type="submit"
-              className="inline-flex items-center justify-center rounded-full bg-brand-blue px-10 py-2.5 font-bebas text-sm tracking-[0.12em] text-white transition-opacity hover:opacity-90 sm:px-12 sm:py-3"
+              disabled={status === "sending"}
+              className="inline-flex items-center justify-center rounded-full bg-brand-blue px-10 py-2.5 font-bebas text-sm tracking-[0.12em] text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 sm:px-12 sm:py-3"
             >
-              {dict.submit}
+              {status === "sending" ? dict.sending : dict.submit}
             </button>
+
+            {status === "success" ? (
+              <p className="font-montserrat text-sm font-light text-brand-blue">
+                {dict.success}
+              </p>
+            ) : null}
+
+            {status === "error" ? (
+              <p className="font-montserrat text-sm font-light text-red-400">
+                {dict.error}
+              </p>
+            ) : null}
           </div>
         </form>
       </div>

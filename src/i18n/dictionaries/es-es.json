@@ -246,7 +246,6 @@
   "contact": {
     "titleLine1": "QUIERO SER",
     "titleLine2": "PATROCINADOR",
-    "whatsappIntro": "¡Hola! Vengo del sitio web de Gentlemen Blue.",
     "noteLines": [
       "QUIZÁ INCLUIR UN CAMPO AQUÍ",
       "PARA PATROCINADORES.",
@@ -259,7 +258,10 @@
       "phone": "teléfono",
       "message": "mensaje"
     },
-    "submit": "ENVIAR"
+    "submit": "ENVIAR",
+    "sending": "ENVIANDO...",
+    "success": "¡Mensaje enviado con éxito!",
+    "error": "No se pudo enviar. Inténtalo de nuevo."
   },
   "footer": {
     "saveTheDate": {
