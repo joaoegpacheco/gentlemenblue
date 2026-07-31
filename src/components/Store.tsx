@@ -51,7 +51,7 @@ export function Store({ dict }: StoreProps) {
             <span className="text-[#0E7AEB]">{dict.heading.blue}</span>
           </h2>
           <p
-            className={`${oswald.className} mt-3 text-xs font-semibold uppercase tracking-[0.12em] text-white sm:mt-5 sm:text-sm lg:text-base`}
+            className={`${oswald.className} mt-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-white sm:mt-2 sm:text-sm lg:text-base`}
           >
             {dict.hashtag}
           </p>

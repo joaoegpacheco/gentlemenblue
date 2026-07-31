@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { assets, socialIcons } from "@/lib/assets";
-import { abrilFatface, inter } from "@/lib/fonts";
+import { inter } from "@/lib/fonts";
 
 import { AnimatedLogo } from "./AnimatedLogo";
 
@@ -44,16 +44,19 @@ export function Footer({ dict }: FooterProps) {
           width={1024}
           height={453}
           unoptimized
-          className="block h-auto w-full max-w-none"
+          className="block h-[16rem] w-full max-w-none object-cover object-[center_80%] sm:h-[18rem] md:h-[20rem] lg:h-[22rem] xl:h-[26rem] 2xl:h-[32rem] min-[2400px]:h-[56rem] min-[2560px]:h-[80rem] min-[3840px]:h-[96rem]"
           sizes="100vw"
           priority
           aria-hidden
         />
 
-        <div className="absolute inset-0 mt-8 flex sm:mt-12 md:mt-16">
-          <div
-            className={`${abrilFatface.className} flex w-[58%] flex-col items-center px-[2cqw] text-center`}
-          >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-linear-to-r from-black/80 via-black/55 to-black/25"
+        />
+
+        <div className="absolute inset-0 flex items-center">
+          <div className="flex w-[58%] flex-col items-center px-[2cqw] text-center">
             <div className="flex items-center justify-center gap-[0.55cqw]">
               <span
                 aria-hidden
@@ -61,7 +64,7 @@ export function Footer({ dict }: FooterProps) {
               >
                 ★
               </span>
-              <p className="text-[clamp(8px,1.56cqw,50px)] tracking-[0.18em] text-[#B3B3B3]">
+              <p className="font-title-vintage text-[clamp(8px,1.56cqw,50px)] tracking-[0.18em] text-[#B3B3B3]">
                 {dict.saveTheDate.label}
               </p>
               <span
@@ -71,7 +74,7 @@ export function Footer({ dict }: FooterProps) {
                 ★
               </span>
             </div>
-            <p className="mt-[0.35cqw] text-[clamp(20px,5.27cqw,100px)] leading-[0.95] tracking-[0.02em] text-[#B3B3B3]">
+            <p className="font-title-vintage mt-[0.35cqw] text-[clamp(20px,5.27cqw,100px)] leading-[0.95] tracking-[0.02em] text-[#B3B3B3]">
               {dict.saveTheDate.date}
             </p>
             <p className="mt-[0.65cqw] text-[clamp(8px,1.37cqw,50px)] tracking-[0.06em] text-[#B3B3B3]">

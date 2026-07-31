@@ -21,7 +21,7 @@ export function Gallery({ dict }: GalleryProps) {
             <span className="text-[#0E7AEB]">{dict.heading.blue}</span>
           </h2>
           <p
-            className={`${inter.className} mt-3 text-xs font-semibold uppercase tracking-[0.12em] text-[#B3B3B3] sm:mt-5 sm:text-sm lg:text-base`}
+            className={`${inter.className} mt-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-[#B3B3B3] sm:mt-2 sm:text-sm lg:text-base`}
           >
             {dict.subtitle}
           </p>

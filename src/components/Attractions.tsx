@@ -53,12 +53,12 @@ function AttractionCard({
       <div
         className={`${inter.className} relative z-10 flex min-h-0 flex-1 flex-col items-center px-1.5 pb-2.5 pt-[76%] text-center sm:px-3 sm:pb-4 lg:pt-[78%]`}
       >
-        <h3 className="shrink-0 font-bebas text-[clamp(0.7rem,3.2vw,1rem)] leading-tight tracking-[0.06em]">
+        <h3 className="shrink-0 font-bebas text-[clamp(0.85rem,3.6vw,1.2rem)] leading-tight tracking-[0.06em]">
           <span className="block text-[#B3B3B3]">{item.titleLine1}</span>
           <span className="block text-[#0E7AEB]">{item.titleLine2}</span>
         </h3>
 
-        <p className="mt-1.5 line-clamp-4 max-w-[14rem] flex-1 text-[8px] leading-snug text-white/90 sm:mt-2 sm:line-clamp-5 sm:text-[10px] lg:text-[11px]">
+        <p className="mt-1.5 line-clamp-4 max-w-[14rem] flex-1 text-[9px] leading-snug text-white/90 sm:mt-2 sm:line-clamp-5 sm:text-[11px] lg:text-xs">
           {item.description}
         </p>
 
@@ -105,7 +105,7 @@ export function Attractions({ dict }: AttractionsProps) {
             />
           </div>
           <p
-            className={`${inter.className} mt-3 text-xs font-semibold uppercase tracking-[0.12em] text-[#B3B3B3] sm:mt-5 sm:text-sm lg:text-base`}
+            className={`${inter.className} mt-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-[#B3B3B3] sm:mt-2 sm:text-sm lg:text-base`}
           >
             {dict.subtitle}
           </p>

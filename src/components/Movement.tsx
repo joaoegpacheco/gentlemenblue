@@ -30,13 +30,15 @@ export function Movement({ dict }: MovementProps) {
             <span className="block text-2xl text-[#BDBDBD] sm:text-3xl lg:text-4xl">
               {dict.heading.line1}
             </span>
-            <span className="mt-1 block text-[clamp(1.75rem,4.5vw,3.75rem)] text-[#BDBDBD] lg:mt-2">
-              {dict.heading.line2Prefix}{" "}
-              <span className="text-[#0E7AEB]">{dict.heading.line2Highlight}</span>
+            <span className="mt-0.5 block text-[clamp(1.75rem,4.5vw,3.75rem)] leading-[0.95] text-[#BDBDBD] lg:mt-1">
+              <span className="block">{dict.heading.line2Prefix}</span>
+              <span className="block text-[#0E7AEB]">
+                {dict.heading.line2Highlight}
+              </span>
             </span>
           </h2>
 
-          <p className="mt-4 text-sm font-semibold uppercase tracking-[0.08em] text-brand-blue sm:mt-5 sm:text-base lg:text-lg">
+          <p className="mt-2 text-sm font-semibold uppercase tracking-[0.08em] text-brand-blue sm:mt-2.5 sm:text-base lg:text-lg">
             {dict.subheading}
           </p>
 
@@ -46,11 +48,9 @@ export function Movement({ dict }: MovementProps) {
             ))}
           </div>
 
-          <p className="mt-6 text-sm font-semibold uppercase tracking-[0.08em] text-brand-blue sm:mt-8 sm:text-base lg:text-lg">
-            {dict.closing}
-          </p>
-          <p className="text-sm font-semibold uppercase tracking-[0.08em] text-[#7DBAF8] sm:text-base lg:text-lg">
-            {dict.closing2}
+          <p className="mt-6 text-base font-semibold uppercase tracking-[0.08em] sm:mt-8 sm:text-lg lg:text-xl">
+            <span className="text-brand-blue">{dict.closing}</span>
+            <span className="text-[#7DBAF8]">{dict.closing2}</span>
           </p>
         </div>
       </div>
