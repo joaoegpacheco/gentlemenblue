@@ -45,12 +45,12 @@ export function Countdown({ dict, initialTimeLeft }: CountdownProps) {
         {units.map(({ key, label }) => (
           <div
             key={key}
-            className="flex h-[clamp(2.75rem,8.5vh,12rem)] flex-col items-center justify-center rounded-sm border border-white/50 bg-black/20 px-1 py-1 sm:px-2 [@media(max-height:640px)]:h-[2.5rem]"
+            className="flex h-[clamp(3rem,9vh,12.5rem)] flex-col items-center justify-center rounded-sm border border-white/50 bg-black/20 px-1.5 pt-[clamp(0.45rem,1.1vh,1rem)] pb-[clamp(0.35rem,0.9vh,0.85rem)] text-center sm:px-2.5 [@media(max-height:640px)]:h-[2.75rem]"
           >
             <span className="font-bebas text-[clamp(1.25rem,1.6vw+1.6vh,5.5rem)] leading-none text-white">
               {formatUnit(timeLeft[key], key)}
             </span>
-            <span className="mt-0.5 font-montserrat text-[clamp(0.45rem,0.4vw+0.35vh,1.35rem)] tracking-wider text-brand-gray sm:mt-1">
+            <span className="mt-0 font-montserrat text-[clamp(0.45rem,0.4vw+0.35vh,1.35rem)] leading-none tracking-wider text-brand-gray">
               {label}
             </span>
           </div>
