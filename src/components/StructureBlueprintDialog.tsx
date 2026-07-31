@@ -57,7 +57,7 @@ export function StructureBlueprintDialog({
           role="presentation"
         >
           <div
-            className="relative w-full max-w-5xl"
+            className="relative w-full max-w-6xl"
             onClick={(event) => event.stopPropagation()}
             role="dialog"
             aria-modal="true"
@@ -71,11 +71,12 @@ export function StructureBlueprintDialog({
               {closeLabel}
             </button>
             <Image
-              src={assets.images.structureBlueprint}
+              src={assets.images.structurePlantaCompleta}
               alt={imageAlt}
               width={1024}
-              height={339}
+              height={682}
               className="h-auto w-full rounded-sm"
+              priority
             />
           </div>
         </div>

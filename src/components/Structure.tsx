@@ -98,9 +98,9 @@ export function Structure({ dict }: StructureProps) {
               <div>
                 <StructureStatValue
                   value={item.value}
-                  className={`${inter.className} text-[clamp(1.75rem,4vw,2.5rem)] font-bold leading-none items-center text-white`}
+                  className={`${inter.className} text-[clamp(2rem,4.5vw,2.85rem)] font-bold leading-none items-center text-white`}
                 />
-                <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-white sm:text-xs">
+                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.12em] text-white sm:text-sm">
                   {item.label}
                 </p>
               </div>
