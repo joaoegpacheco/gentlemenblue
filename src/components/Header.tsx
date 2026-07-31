@@ -27,7 +27,7 @@ export function Header({ dict }: HeaderProps) {
     { href: "#patrocinadores", label: dict.nav.sponsors },
     { href: "#galeria", label: dict.nav.gallery },
     { href: "#faq", label: dict.nav.faq },
-    { href: "#loja", label: dict.nav.store },
+    // { href: "#loja", label: dict.nav.store },
     { href: "#contato", label: dict.nav.contact },
   ];
 
